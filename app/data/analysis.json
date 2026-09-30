@@ -1,0 +1,6182 @@
+{
+  "meta": {
+    "title": "Duke Breast MRI Radiomics",
+    "subtitle": "Conventional, leakage-aware feature selection",
+    "generatedAt": "2026-08-11",
+    "radiomicsSource": "merged_patient_Data_filtered.csv",
+    "clinicalSource": "duke_brca_clin.xlsx",
+    "patientCount": 772,
+    "radiomicFeatureCount": 2064,
+    "tumorFeatureCount": 1032,
+    "vesselFeatureCount": 1032,
+    "clinicalPredictorsUsed": 0,
+    "joinMatched": 772,
+    "duplicatePatients": 0,
+    "missingRadiomicCells": 0,
+    "constantFeatures": 0
+  },
+  "endpoints": {
+    "survival": {
+      "key": "survival",
+      "sampleCount": 560,
+      "classCount": 2,
+      "classes": [
+        {
+          "label": "Event (death)",
+          "count": 50,
+          "percent": 8.9
+        },
+        {
+          "label": "Censored",
+          "count": 510,
+          "percent": 91.1
+        }
+      ],
+      "metrics": [
+        {
+          "key": "concordance",
+          "label": "Concordance index",
+          "value": 0.665,
+          "low": 0.581,
+          "high": 0.74,
+          "higherBetter": true
+        },
+        {
+          "key": "logrankP",
+          "label": "Log-rank p (risk groups)",
+          "value": 0.001,
+          "low": 0.0,
+          "high": 0.127,
+          "higherBetter": false
+        }
+      ],
+      "survivalCurve": {
+        "points": [
+          {
+            "x": 0.0,
+            "y": 1.0
+          },
+          {
+            "x": 1.37976,
+            "y": 1.0
+          },
+          {
+            "x": 3.08804,
+            "y": 1.0
+          },
+          {
+            "x": 6.14323,
+            "y": 0.99816
+          },
+          {
+            "x": 7.22733,
+            "y": 0.9963
+          },
+          {
+            "x": 9.65834,
+            "y": 0.99256
+          },
+          {
+            "x": 11.46518,
+            "y": 0.98499
+          },
+          {
+            "x": 13.60053,
+            "y": 0.97924
+          },
+          {
+            "x": 16.03154,
+            "y": 0.97538
+          },
+          {
+            "x": 18.59396,
+            "y": 0.97151
+          },
+          {
+            "x": 19.25099,
+            "y": 0.96368
+          },
+          {
+            "x": 21.18922,
+            "y": 0.95581
+          },
+          {
+            "x": 23.42313,
+            "y": 0.94791
+          },
+          {
+            "x": 24.54008,
+            "y": 0.94791
+          },
+          {
+            "x": 25.85414,
+            "y": 0.94387
+          },
+          {
+            "x": 26.54402,
+            "y": 0.94182
+          },
+          {
+            "x": 27.43101,
+            "y": 0.93974
+          },
+          {
+            "x": 28.2523,
+            "y": 0.93974
+          },
+          {
+            "x": 28.77792,
+            "y": 0.93761
+          },
+          {
+            "x": 30.45335,
+            "y": 0.93761
+          },
+          {
+            "x": 31.17608,
+            "y": 0.9354
+          },
+          {
+            "x": 32.06307,
+            "y": 0.93316
+          },
+          {
+            "x": 32.62155,
+            "y": 0.93316
+          },
+          {
+            "x": 33.40999,
+            "y": 0.93088
+          },
+          {
+            "x": 34.98686,
+            "y": 0.92856
+          },
+          {
+            "x": 35.61104,
+            "y": 0.92619
+          },
+          {
+            "x": 36.39947,
+            "y": 0.92619
+          },
+          {
+            "x": 37.45072,
+            "y": 0.92374
+          },
+          {
+            "x": 38.04205,
+            "y": 0.92374
+          },
+          {
+            "x": 38.56767,
+            "y": 0.92115
+          },
+          {
+            "x": 39.78318,
+            "y": 0.92115
+          },
+          {
+            "x": 40.96583,
+            "y": 0.92115
+          },
+          {
+            "x": 41.68857,
+            "y": 0.9184
+          },
+          {
+            "x": 42.87122,
+            "y": 0.91287
+          },
+          {
+            "x": 44.21813,
+            "y": 0.91005
+          },
+          {
+            "x": 45.53219,
+            "y": 0.90434
+          },
+          {
+            "x": 46.41919,
+            "y": 0.90434
+          },
+          {
+            "x": 46.91196,
+            "y": 0.90434
+          },
+          {
+            "x": 47.8318,
+            "y": 0.90434
+          },
+          {
+            "x": 48.62024,
+            "y": 0.90434
+          },
+          {
+            "x": 49.27727,
+            "y": 0.90434
+          },
+          {
+            "x": 50.03285,
+            "y": 0.90434
+          },
+          {
+            "x": 50.68988,
+            "y": 0.90434
+          },
+          {
+            "x": 51.05125,
+            "y": 0.90434
+          },
+          {
+            "x": 52.2339,
+            "y": 0.90071
+          },
+          {
+            "x": 53.12089,
+            "y": 0.90071
+          },
+          {
+            "x": 54.4021,
+            "y": 0.89683
+          },
+          {
+            "x": 55.15769,
+            "y": 0.89683
+          },
+          {
+            "x": 56.04468,
+            "y": 0.89273
+          },
+          {
+            "x": 58.04862,
+            "y": 0.89273
+          },
+          {
+            "x": 58.6728,
+            "y": 0.89273
+          },
+          {
+            "x": 59.19842,
+            "y": 0.89273
+          },
+          {
+            "x": 60.08541,
+            "y": 0.88806
+          },
+          {
+            "x": 61.00526,
+            "y": 0.88806
+          },
+          {
+            "x": 61.9251,
+            "y": 0.88806
+          },
+          {
+            "x": 62.68068,
+            "y": 0.88806
+          },
+          {
+            "x": 64.0933,
+            "y": 0.88806
+          },
+          {
+            "x": 64.61892,
+            "y": 0.88237
+          },
+          {
+            "x": 65.34166,
+            "y": 0.88237
+          },
+          {
+            "x": 65.90013,
+            "y": 0.88237
+          },
+          {
+            "x": 67.08279,
+            "y": 0.88237
+          },
+          {
+            "x": 68.03548,
+            "y": 0.88237
+          },
+          {
+            "x": 69.21813,
+            "y": 0.88237
+          },
+          {
+            "x": 70.49934,
+            "y": 0.88237
+          },
+          {
+            "x": 71.84625,
+            "y": 0.88237
+          },
+          {
+            "x": 72.37188,
+            "y": 0.88237
+          },
+          {
+            "x": 73.35742,
+            "y": 0.88237
+          },
+          {
+            "x": 73.94875,
+            "y": 0.88237
+          },
+          {
+            "x": 74.57293,
+            "y": 0.88237
+          },
+          {
+            "x": 76.37976,
+            "y": 0.88237
+          },
+          {
+            "x": 77.03679,
+            "y": 0.88237
+          },
+          {
+            "x": 78.64652,
+            "y": 0.88237
+          },
+          {
+            "x": 80.58476,
+            "y": 0.88237
+          },
+          {
+            "x": 84.8226,
+            "y": 0.88237
+          },
+          {
+            "x": 91.52431,
+            "y": 0.88237
+          },
+          {
+            "x": 95.79501,
+            "y": 0.88237
+          },
+          {
+            "x": 99.01445,
+            "y": 0.88237
+          },
+          {
+            "x": 103.2523,
+            "y": 0.88237
+          },
+          {
+            "x": 107.32589,
+            "y": 0.88237
+          },
+          {
+            "x": 114.06045,
+            "y": 0.88237
+          }
+        ],
+        "maxMonths": 114.1
+      },
+      "riskGroups": {
+        "logrankP": 0.0012,
+        "groups": [
+          {
+            "label": "Lower predicted risk",
+            "n": 280,
+            "events": 14,
+            "points": [
+              {
+                "x": 0.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.24836,
+                "y": 1.0
+              },
+              {
+                "x": 3.41656,
+                "y": 1.0
+              },
+              {
+                "x": 6.07753,
+                "y": 1.0
+              },
+              {
+                "x": 6.86597,
+                "y": 1.0
+              },
+              {
+                "x": 8.27858,
+                "y": 1.0
+              },
+              {
+                "x": 10.74244,
+                "y": 0.99237
+              },
+              {
+                "x": 13.0749,
+                "y": 0.98852
+              },
+              {
+                "x": 19.11958,
+                "y": 0.98463
+              },
+              {
+                "x": 21.28778,
+                "y": 0.98069
+              },
+              {
+                "x": 23.45598,
+                "y": 0.97673
+              },
+              {
+                "x": 23.94875,
+                "y": 0.97673
+              },
+              {
+                "x": 25.0657,
+                "y": 0.97673
+              },
+              {
+                "x": 26.31406,
+                "y": 0.96851
+              },
+              {
+                "x": 26.57687,
+                "y": 0.96851
+              },
+              {
+                "x": 27.29961,
+                "y": 0.9643
+              },
+              {
+                "x": 27.62812,
+                "y": 0.9643
+              },
+              {
+                "x": 28.28515,
+                "y": 0.9643
+              },
+              {
+                "x": 29.56636,
+                "y": 0.95994
+              },
+              {
+                "x": 31.01183,
+                "y": 0.95994
+              },
+              {
+                "x": 32.49014,
+                "y": 0.95994
+              },
+              {
+                "x": 33.50854,
+                "y": 0.95994
+              },
+              {
+                "x": 34.98686,
+                "y": 0.95994
+              },
+              {
+                "x": 35.61104,
+                "y": 0.95523
+              },
+              {
+                "x": 36.30092,
+                "y": 0.95523
+              },
+              {
+                "x": 37.45072,
+                "y": 0.95038
+              },
+              {
+                "x": 37.91064,
+                "y": 0.95038
+              },
+              {
+                "x": 38.56767,
+                "y": 0.95038
+              },
+              {
+                "x": 39.35611,
+                "y": 0.95038
+              },
+              {
+                "x": 40.04599,
+                "y": 0.95038
+              },
+              {
+                "x": 40.96583,
+                "y": 0.95038
+              },
+              {
+                "x": 41.98423,
+                "y": 0.95038
+              },
+              {
+                "x": 43.23259,
+                "y": 0.95038
+              },
+              {
+                "x": 44.80946,
+                "y": 0.95038
+              },
+              {
+                "x": 45.36794,
+                "y": 0.94462
+              },
+              {
+                "x": 46.45204,
+                "y": 0.94462
+              },
+              {
+                "x": 46.87911,
+                "y": 0.94462
+              },
+              {
+                "x": 47.27332,
+                "y": 0.94462
+              },
+              {
+                "x": 48.12746,
+                "y": 0.94462
+              },
+              {
+                "x": 48.94875,
+                "y": 0.94462
+              },
+              {
+                "x": 50.0,
+                "y": 0.94462
+              },
+              {
+                "x": 50.49277,
+                "y": 0.94462
+              },
+              {
+                "x": 50.88699,
+                "y": 0.94462
+              },
+              {
+                "x": 51.05125,
+                "y": 0.94462
+              },
+              {
+                "x": 52.13535,
+                "y": 0.94462
+              },
+              {
+                "x": 53.38371,
+                "y": 0.94462
+              },
+              {
+                "x": 54.56636,
+                "y": 0.94462
+              },
+              {
+                "x": 55.15769,
+                "y": 0.94462
+              },
+              {
+                "x": 55.78187,
+                "y": 0.94462
+              },
+              {
+                "x": 57.16163,
+                "y": 0.94462
+              },
+              {
+                "x": 58.63995,
+                "y": 0.94462
+              },
+              {
+                "x": 58.8042,
+                "y": 0.94462
+              },
+              {
+                "x": 59.23127,
+                "y": 0.94462
+              },
+              {
+                "x": 60.08541,
+                "y": 0.93478
+              },
+              {
+                "x": 60.80815,
+                "y": 0.93478
+              },
+              {
+                "x": 61.13666,
+                "y": 0.93478
+              },
+              {
+                "x": 62.77924,
+                "y": 0.93478
+              },
+              {
+                "x": 64.12615,
+                "y": 0.93478
+              },
+              {
+                "x": 64.98029,
+                "y": 0.93478
+              },
+              {
+                "x": 65.34166,
+                "y": 0.93478
+              },
+              {
+                "x": 65.80158,
+                "y": 0.93478
+              },
+              {
+                "x": 66.78712,
+                "y": 0.93478
+              },
+              {
+                "x": 67.3456,
+                "y": 0.93478
+              },
+              {
+                "x": 68.4297,
+                "y": 0.93478
+              },
+              {
+                "x": 68.95532,
+                "y": 0.93478
+              },
+              {
+                "x": 70.26938,
+                "y": 0.93478
+              },
+              {
+                "x": 72.04336,
+                "y": 0.93478
+              },
+              {
+                "x": 72.50329,
+                "y": 0.93478
+              },
+              {
+                "x": 73.65309,
+                "y": 0.93478
+              },
+              {
+                "x": 74.44152,
+                "y": 0.93478
+              },
+              {
+                "x": 75.22996,
+                "y": 0.93478
+              },
+              {
+                "x": 77.03679,
+                "y": 0.93478
+              },
+              {
+                "x": 77.33246,
+                "y": 0.93478
+              },
+              {
+                "x": 80.45335,
+                "y": 0.93478
+              },
+              {
+                "x": 81.83311,
+                "y": 0.93478
+              },
+              {
+                "x": 88.50197,
+                "y": 0.93478
+              },
+              {
+                "x": 92.21419,
+                "y": 0.93478
+              },
+              {
+                "x": 102.69382,
+                "y": 0.93478
+              },
+              {
+                "x": 105.74901,
+                "y": 0.93478
+              },
+              {
+                "x": 113.83049,
+                "y": 0.93478
+              }
+            ]
+          },
+          {
+            "label": "Higher predicted risk",
+            "n": 280,
+            "events": 36,
+            "points": [
+              {
+                "x": 0.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.37976,
+                "y": 1.0
+              },
+              {
+                "x": 3.08804,
+                "y": 1.0
+              },
+              {
+                "x": 6.73456,
+                "y": 0.99634
+              },
+              {
+                "x": 8.86991,
+                "y": 0.98896
+              },
+              {
+                "x": 11.43233,
+                "y": 0.98524
+              },
+              {
+                "x": 12.91064,
+                "y": 0.98149
+              },
+              {
+                "x": 13.60053,
+                "y": 0.97011
+              },
+              {
+                "x": 15.34166,
+                "y": 0.9663
+              },
+              {
+                "x": 17.21419,
+                "y": 0.95861
+              },
+              {
+                "x": 18.13403,
+                "y": 0.95474
+              },
+              {
+                "x": 18.75821,
+                "y": 0.95081
+              },
+              {
+                "x": 19.28384,
+                "y": 0.93899
+              },
+              {
+                "x": 21.28778,
+                "y": 0.92716
+              },
+              {
+                "x": 23.35742,
+                "y": 0.91926
+              },
+              {
+                "x": 25.42707,
+                "y": 0.91527
+              },
+              {
+                "x": 26.54402,
+                "y": 0.91527
+              },
+              {
+                "x": 27.72668,
+                "y": 0.91527
+              },
+              {
+                "x": 28.41656,
+                "y": 0.91527
+              },
+              {
+                "x": 29.79632,
+                "y": 0.91527
+              },
+              {
+                "x": 30.55191,
+                "y": 0.91527
+              },
+              {
+                "x": 31.17608,
+                "y": 0.91089
+              },
+              {
+                "x": 31.96452,
+                "y": 0.90644
+              },
+              {
+                "x": 32.5887,
+                "y": 0.90644
+              },
+              {
+                "x": 33.01577,
+                "y": 0.90187
+              },
+              {
+                "x": 34.46124,
+                "y": 0.89719
+              },
+              {
+                "x": 35.11827,
+                "y": 0.89719
+              },
+              {
+                "x": 36.33377,
+                "y": 0.89719
+              },
+              {
+                "x": 36.69514,
+                "y": 0.89719
+              },
+              {
+                "x": 37.58213,
+                "y": 0.89719
+              },
+              {
+                "x": 38.04205,
+                "y": 0.89719
+              },
+              {
+                "x": 38.20631,
+                "y": 0.89719
+              },
+              {
+                "x": 40.37451,
+                "y": 0.89185
+              },
+              {
+                "x": 41.62286,
+                "y": 0.89185
+              },
+              {
+                "x": 42.64126,
+                "y": 0.87513
+              },
+              {
+                "x": 43.98817,
+                "y": 0.86945
+              },
+              {
+                "x": 45.40079,
+                "y": 0.86377
+              },
+              {
+                "x": 45.86071,
+                "y": 0.86377
+              },
+              {
+                "x": 46.7477,
+                "y": 0.86377
+              },
+              {
+                "x": 47.8318,
+                "y": 0.86377
+              },
+              {
+                "x": 48.62024,
+                "y": 0.86377
+              },
+              {
+                "x": 49.14586,
+                "y": 0.86377
+              },
+              {
+                "x": 49.90145,
+                "y": 0.86377
+              },
+              {
+                "x": 50.22996,
+                "y": 0.86377
+              },
+              {
+                "x": 51.24836,
+                "y": 0.86377
+              },
+              {
+                "x": 52.49671,
+                "y": 0.85663
+              },
+              {
+                "x": 52.82523,
+                "y": 0.85663
+              },
+              {
+                "x": 54.4021,
+                "y": 0.84898
+              },
+              {
+                "x": 55.19054,
+                "y": 0.84898
+              },
+              {
+                "x": 57.06307,
+                "y": 0.84104
+              },
+              {
+                "x": 58.18003,
+                "y": 0.84104
+              },
+              {
+                "x": 59.09987,
+                "y": 0.84104
+              },
+              {
+                "x": 60.51248,
+                "y": 0.84104
+              },
+              {
+                "x": 61.26807,
+                "y": 0.84104
+              },
+              {
+                "x": 62.12221,
+                "y": 0.84104
+              },
+              {
+                "x": 62.71353,
+                "y": 0.84104
+              },
+              {
+                "x": 63.96189,
+                "y": 0.84104
+              },
+              {
+                "x": 64.48752,
+                "y": 0.8304
+              },
+              {
+                "x": 65.44021,
+                "y": 0.8304
+              },
+              {
+                "x": 66.13009,
+                "y": 0.8304
+              },
+              {
+                "x": 68.03548,
+                "y": 0.8304
+              },
+              {
+                "x": 70.10512,
+                "y": 0.8304
+              },
+              {
+                "x": 70.89356,
+                "y": 0.8304
+              },
+              {
+                "x": 71.55059,
+                "y": 0.8304
+              },
+              {
+                "x": 72.8318,
+                "y": 0.8304
+              },
+              {
+                "x": 73.68594,
+                "y": 0.8304
+              },
+              {
+                "x": 73.88305,
+                "y": 0.8304
+              },
+              {
+                "x": 74.27727,
+                "y": 0.8304
+              },
+              {
+                "x": 76.37976,
+                "y": 0.8304
+              },
+              {
+                "x": 76.93824,
+                "y": 0.8304
+              },
+              {
+                "x": 78.21945,
+                "y": 0.8304
+              },
+              {
+                "x": 79.53351,
+                "y": 0.8304
+              },
+              {
+                "x": 84.8226,
+                "y": 0.8304
+              },
+              {
+                "x": 91.88568,
+                "y": 0.8304
+              },
+              {
+                "x": 93.85677,
+                "y": 0.8304
+              },
+              {
+                "x": 98.94875,
+                "y": 0.8304
+              },
+              {
+                "x": 99.9343,
+                "y": 0.8304
+              },
+              {
+                "x": 103.2523,
+                "y": 0.8304
+              },
+              {
+                "x": 108.37714,
+                "y": 0.8304
+              },
+              {
+                "x": 114.06045,
+                "y": 0.8304
+              }
+            ]
+          }
+        ]
+      },
+      "featureFunnel": [
+        {
+          "label": "Radiomic input",
+          "count": 2064,
+          "note": "Tumor + vessel regions"
+        },
+        {
+          "label": "QC retained",
+          "count": 2064,
+          "note": "No missing, infinite, or constant features"
+        },
+        {
+          "label": "Univariate FDR",
+          "count": 965,
+          "note": "Benjamini\u2013Hochberg q < 0.05"
+        },
+        {
+          "label": "Nonredundant FDR",
+          "count": 66,
+          "note": "|Spearman \u03c1| < 0.90 representatives"
+        },
+        {
+          "label": "Stable Cox",
+          "count": 2,
+          "note": "Selected in \u226550% of outer folds"
+        }
+      ],
+      "features": [
+        {
+          "rank": 1,
+          "feature": "log-sigma-5-0-mm-3d_glszm_graylevelnonuniformity",
+          "display": "LOG 5-0 MM \u00b7 GLSZM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.867,
+          "coefficient": 0.0224,
+          "effect": 0.3843,
+          "qValue": 7.598195181524631e-08,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 2,
+          "feature": "log-sigma-3-0-mm-3d_glszm_sizezonenonuniformity",
+          "display": "LOG 3-0 MM \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.533,
+          "coefficient": 0.0455,
+          "effect": 0.5347,
+          "qValue": 2.8024811685044013e-09,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 3,
+          "feature": "log-sigma-5-0-mm-3d_glszm_sizezonenonuniformity",
+          "display": "LOG 5-0 MM \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.467,
+          "coefficient": 0.0,
+          "effect": -0.533,
+          "qValue": 0.3211534907223311,
+          "direction": "Lower risk",
+          "fdrSignificant": false,
+          "finalModel": true
+        },
+        {
+          "rank": 4,
+          "feature": "wavelet-hll_glszm_graylevelvariance",
+          "display": "WAVELET HLL \u00b7 GLSZM \u00b7 Gray-Levelvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLL",
+          "family": "GLSZM",
+          "measure": "Gray-Levelvariance",
+          "frequency": 0.467,
+          "coefficient": 0.0,
+          "effect": -0.945,
+          "qValue": 2.7931229144556707e-05,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 5,
+          "feature": "log-sigma-5-0-mm-3d_glrlm_runentropy",
+          "display": "LOG 5-0 MM \u00b7 GLRLM \u00b7 Runentropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLRLM",
+          "measure": "Runentropy",
+          "frequency": 0.333,
+          "coefficient": 0.0,
+          "effect": 0.8092,
+          "qValue": 3.9546140915397736e-05,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 6,
+          "feature": "wavelet-lhh_firstorder_energy",
+          "display": "WAVELET LHH \u00b7 First order \u00b7 Energy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "First order",
+          "measure": "Energy",
+          "frequency": 0.267,
+          "coefficient": 0.0414,
+          "effect": 0.4026,
+          "qValue": 5.530741174046044e-10,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 7,
+          "feature": "log-sigma-5-0-mm-3d_firstorder_totalenergy",
+          "display": "LOG 5-0 MM \u00b7 First order \u00b7 Totalenergy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "First order",
+          "measure": "Totalenergy",
+          "frequency": 0.267,
+          "coefficient": 0.0,
+          "effect": 0.3716,
+          "qValue": 7.598195181524631e-08,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 8,
+          "feature": "log-sigma-5-0-mm-3d_glszm_graylevelvariance",
+          "display": "LOG 5-0 MM \u00b7 GLSZM \u00b7 Gray-Levelvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelvariance",
+          "frequency": 0.267,
+          "coefficient": 0.0,
+          "effect": -0.8184,
+          "qValue": 4.335316399044428e-05,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 9,
+          "feature": "wavelet-hhl_gldm_smalldependencelowgraylevelemphasis",
+          "display": "WAVELET HHL \u00b7 GLDM \u00b7 Smalldependence Lowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHL",
+          "family": "GLDM",
+          "measure": "Smalldependence Lowgray-Levelemphasis",
+          "frequency": 0.267,
+          "coefficient": 0.0,
+          "effect": -1.1882,
+          "qValue": 0.0013390762582838076,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 10,
+          "feature": "wavelet-lhl_glszm_sizezonenonuniformity",
+          "display": "WAVELET LHL \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHL",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.2,
+          "coefficient": 0.0334,
+          "effect": 0.441,
+          "qValue": 4.9534292366112125e-09,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 11,
+          "feature": "wavelet-lhh_glszm_sizezonenonuniformity",
+          "display": "WAVELET LHH \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.2,
+          "coefficient": 0.0,
+          "effect": 0.4789,
+          "qValue": 2.4552816544804944e-08,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 12,
+          "feature": "wavelet-hhh_firstorder_energy",
+          "display": "WAVELET HHH \u00b7 First order \u00b7 Energy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHH",
+          "family": "First order",
+          "measure": "Energy",
+          "frequency": 0.2,
+          "coefficient": 0.0,
+          "effect": 0.3759,
+          "qValue": 3.9639728131519533e-10,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 13,
+          "feature": "wavelet-hll_glrlm_graylevelnonuniformity",
+          "display": "WAVELET HLL \u00b7 GLRLM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLL",
+          "family": "GLRLM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.2,
+          "coefficient": 0.0,
+          "effect": -0.2702,
+          "qValue": 0.6034704763859984,
+          "direction": "Lower risk",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 14,
+          "feature": "log-sigma-1-0-mm-3d_glszm_lowgraylevelzoneemphasis",
+          "display": "LOG 1-0 MM \u00b7 GLSZM \u00b7 Lowgray-Levelzoneemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 1-0 MM",
+          "family": "GLSZM",
+          "measure": "Lowgray-Levelzoneemphasis",
+          "frequency": 0.2,
+          "coefficient": 0.0,
+          "effect": -1.2257,
+          "qValue": 0.0005141252854149001,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 15,
+          "feature": "log-sigma-5-0-mm-3d_glszm_lowgraylevelzoneemphasis",
+          "display": "LOG 5-0 MM \u00b7 GLSZM \u00b7 Lowgray-Levelzoneemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLSZM",
+          "measure": "Lowgray-Levelzoneemphasis",
+          "frequency": 0.2,
+          "coefficient": 0.0,
+          "effect": -1.1044,
+          "qValue": 0.005797489035776626,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 16,
+          "feature": "wavelet-llh_glszm_graylevelnonuniformity",
+          "display": "WAVELET LLH \u00b7 GLSZM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLSZM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.133,
+          "coefficient": 0.099,
+          "effect": 0.3554,
+          "qValue": 3.728747518463994e-09,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 17,
+          "feature": "log-sigma-5-0-mm-3d_firstorder_energy",
+          "display": "LOG 5-0 MM \u00b7 First order \u00b7 Energy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "First order",
+          "measure": "Energy",
+          "frequency": 0.133,
+          "coefficient": 0.0,
+          "effect": 0.3716,
+          "qValue": 7.598195181524631e-08,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 18,
+          "feature": "wavelet-lhh_firstorder_totalenergy",
+          "display": "WAVELET LHH \u00b7 First order \u00b7 Totalenergy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "First order",
+          "measure": "Totalenergy",
+          "frequency": 0.133,
+          "coefficient": 0.0,
+          "effect": 0.4026,
+          "qValue": 5.530741174046044e-10,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 19,
+          "feature": "wavelet-hhh_firstorder_totalenergy",
+          "display": "WAVELET HHH \u00b7 First order \u00b7 Totalenergy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHH",
+          "family": "First order",
+          "measure": "Totalenergy",
+          "frequency": 0.133,
+          "coefficient": 0.0,
+          "effect": 0.3759,
+          "qValue": 3.9639728131519533e-10,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 20,
+          "feature": "wavelet-llh_glszm_sizezonenonuniformity",
+          "display": "WAVELET LLH \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.133,
+          "coefficient": 0.0,
+          "effect": 0.4338,
+          "qValue": 2.4552816544804944e-08,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 21,
+          "feature": "log-sigma-3-0-mm-3d_glszm_graylevelvariance",
+          "display": "LOG 3-0 MM \u00b7 GLSZM \u00b7 Gray-Levelvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelvariance",
+          "frequency": 0.133,
+          "coefficient": 0.0,
+          "effect": -0.7889,
+          "qValue": 4.420869371646911e-05,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 22,
+          "feature": "wavelet-lhl_glszm_lowgraylevelzoneemphasis",
+          "display": "WAVELET LHL \u00b7 GLSZM \u00b7 Lowgray-Levelzoneemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHL",
+          "family": "GLSZM",
+          "measure": "Lowgray-Levelzoneemphasis",
+          "frequency": 0.133,
+          "coefficient": 0.0,
+          "effect": -1.197,
+          "qValue": 0.0016767833057260138,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 23,
+          "feature": "wavelet-lhh_firstorder_minimum",
+          "display": "WAVELET LHH \u00b7 First order \u00b7 Minimum \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "First order",
+          "measure": "Minimum",
+          "frequency": 0.067,
+          "coefficient": 0.2001,
+          "effect": -0.5763,
+          "qValue": 6.115647024203528e-07,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 24,
+          "feature": "original_glszm_sizezonenonuniformity",
+          "display": "Original \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "Original",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.067,
+          "coefficient": 0.0,
+          "effect": 0.4984,
+          "qValue": 3.35272623680529e-09,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 25,
+          "feature": "wavelet-hll_gldm_graylevelnonuniformity",
+          "display": "WAVELET HLL \u00b7 GLDM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLL",
+          "family": "GLDM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.067,
+          "coefficient": 0.0,
+          "effect": -88.2246,
+          "qValue": 0.00036077987716884676,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 26,
+          "feature": "wavelet-hhh_glszm_sizezonenonuniformity",
+          "display": "WAVELET HHH \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHH",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.067,
+          "coefficient": 0.0,
+          "effect": 0.4216,
+          "qValue": 4.6461428105835407e-10,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 27,
+          "feature": "wavelet-hhl_firstorder_energy",
+          "display": "WAVELET HHL \u00b7 First order \u00b7 Energy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHL",
+          "family": "First order",
+          "measure": "Energy",
+          "frequency": 0.067,
+          "coefficient": 0.0,
+          "effect": 0.3191,
+          "qValue": 3.815517606518819e-07,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 28,
+          "feature": "wavelet-hll_glszm_largearealowgraylevelemphasis",
+          "display": "WAVELET HLL \u00b7 GLSZM \u00b7 Largearealowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLL",
+          "family": "GLSZM",
+          "measure": "Largearealowgray-Levelemphasis",
+          "frequency": 0.067,
+          "coefficient": 0.0,
+          "effect": 0.1114,
+          "qValue": 0.06559785836812942,
+          "direction": "Higher risk",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 29,
+          "feature": "log-sigma-5-0-mm-3d_gldm_dependencevariance",
+          "display": "LOG 5-0 MM \u00b7 GLDM \u00b7 Dependence Variance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLDM",
+          "measure": "Dependence Variance",
+          "frequency": 0.067,
+          "coefficient": 0.0,
+          "effect": 0.62,
+          "qValue": 1.328867424277948e-06,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 30,
+          "feature": "log-sigma-3-0-mm-3d_gldm_dependencenonuniformitynormalized",
+          "display": "LOG 3-0 MM \u00b7 GLDM \u00b7 Dependence Non-Uniformitynormalized \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLDM",
+          "measure": "Dependence Non-Uniformitynormalized",
+          "frequency": 0.067,
+          "coefficient": 0.0,
+          "effect": -0.7815,
+          "qValue": 0.0005134069480790172,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 31,
+          "feature": "wavelet-hll_glcm_clusterprominence",
+          "display": "WAVELET HLL \u00b7 GLCM \u00b7 Clusterprominence \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLL",
+          "family": "GLCM",
+          "measure": "Clusterprominence",
+          "frequency": 0.067,
+          "coefficient": 0.0,
+          "effect": -1.4637,
+          "qValue": 0.0014098469779334803,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 32,
+          "feature": "log-sigma-5-0-mm-3d_gldm_dependenceentropy",
+          "display": "LOG 5-0 MM \u00b7 GLDM \u00b7 Dependence Entropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLDM",
+          "measure": "Dependence Entropy",
+          "frequency": 0.067,
+          "coefficient": 0.0,
+          "effect": 0.7299,
+          "qValue": 0.0006956161959068231,
+          "direction": "Higher risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 33,
+          "feature": "wavelet-hhl_glcm_clusterprominence",
+          "display": "WAVELET HHL \u00b7 GLCM \u00b7 Clusterprominence \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHL",
+          "family": "GLCM",
+          "measure": "Clusterprominence",
+          "frequency": 0.067,
+          "coefficient": 0.0,
+          "effect": -0.7431,
+          "qValue": 0.008052171599287216,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 34,
+          "feature": "log-sigma-1-0-mm-3d_gldm_smalldependencelowgraylevelemphasis",
+          "display": "LOG 1-0 MM \u00b7 GLDM \u00b7 Smalldependence Lowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 1-0 MM",
+          "family": "GLDM",
+          "measure": "Smalldependence Lowgray-Levelemphasis",
+          "frequency": 0.067,
+          "coefficient": 0.0,
+          "effect": -1.0947,
+          "qValue": 0.006740137438968375,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 35,
+          "feature": "log-sigma-1-0-mm-3d_gldm_graylevelnonuniformity",
+          "display": "LOG 1-0 MM \u00b7 GLDM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 1-0 MM",
+          "family": "GLDM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -87.0318,
+          "qValue": 0.0002470643241124383,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 36,
+          "feature": "log-sigma-5-0-mm-3d_gldm_graylevelnonuniformity",
+          "display": "LOG 5-0 MM \u00b7 GLDM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLDM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -62.9091,
+          "qValue": 0.0006176452458169753,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 37,
+          "feature": "wavelet-hhh_gldm_graylevelnonuniformity",
+          "display": "WAVELET HHH \u00b7 GLDM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHH",
+          "family": "GLDM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -57.6817,
+          "qValue": 0.000638735041373756,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 38,
+          "feature": "wavelet-llh_glrlm_runvariance",
+          "display": "WAVELET LLH \u00b7 GLRLM \u00b7 Runvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLRLM",
+          "measure": "Runvariance",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -34.4937,
+          "qValue": 1.026715645916116e-13,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 39,
+          "feature": "wavelet-lhl_gldm_graylevelnonuniformity",
+          "display": "WAVELET LHL \u00b7 GLDM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHL",
+          "family": "GLDM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -25.8769,
+          "qValue": 0.011662609687751662,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 40,
+          "feature": "log-sigma-1-0-mm-3d_firstorder_energy",
+          "display": "LOG 1-0 MM \u00b7 First order \u00b7 Energy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 1-0 MM",
+          "family": "First order",
+          "measure": "Energy",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -16.0174,
+          "qValue": 0.013397723730448488,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 41,
+          "feature": "log-sigma-1-0-mm-3d_firstorder_totalenergy",
+          "display": "LOG 1-0 MM \u00b7 First order \u00b7 Totalenergy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 1-0 MM",
+          "family": "First order",
+          "measure": "Totalenergy",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -16.0174,
+          "qValue": 0.013397723730448488,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 42,
+          "feature": "wavelet-hll_glrlm_longrunhighgraylevelemphasis",
+          "display": "WAVELET HLL \u00b7 GLRLM \u00b7 Longrunhighgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLL",
+          "family": "GLRLM",
+          "measure": "Longrunhighgray-Levelemphasis",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -15.2921,
+          "qValue": 5.1674636927147005e-37,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 43,
+          "feature": "log-sigma-3-0-mm-3d_glrlm_runvariance",
+          "display": "LOG 3-0 MM \u00b7 GLRLM \u00b7 Runvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLRLM",
+          "measure": "Runvariance",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -13.6725,
+          "qValue": 2.2387437610316703e-09,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 44,
+          "feature": "wavelet-hlh_gldm_graylevelnonuniformity",
+          "display": "WAVELET HLH \u00b7 GLDM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLH",
+          "family": "GLDM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -12.6391,
+          "qValue": 0.017887702471767557,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 45,
+          "feature": "wavelet-lhl_glrlm_runvariance",
+          "display": "WAVELET LHL \u00b7 GLRLM \u00b7 Runvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHL",
+          "family": "GLRLM",
+          "measure": "Runvariance",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -11.1599,
+          "qValue": 5.541606306273665e-05,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 46,
+          "feature": "wavelet-hhl_gldm_dependencenonuniformity",
+          "display": "WAVELET HHL \u00b7 GLDM \u00b7 Dependence Non-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHL",
+          "family": "GLDM",
+          "measure": "Dependence Non-Uniformity",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -10.9229,
+          "qValue": 2.851319602465681e-05,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 47,
+          "feature": "wavelet-lll_glszm_largeareahighgraylevelemphasis",
+          "display": "WAVELET LLL \u00b7 GLSZM \u00b7 Largeareahighgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLL",
+          "family": "GLSZM",
+          "measure": "Largeareahighgray-Levelemphasis",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -6.915,
+          "qValue": 0.18039305444204787,
+          "direction": "Lower risk",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 48,
+          "feature": "log-sigma-3-0-mm-3d_gldm_graylevelnonuniformity",
+          "display": "LOG 3-0 MM \u00b7 GLDM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLDM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -6.1234,
+          "qValue": 0.06660712721169042,
+          "direction": "Lower risk",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 49,
+          "feature": "wavelet-hhh_glszm_largearealowgraylevelemphasis",
+          "display": "WAVELET HHH \u00b7 GLSZM \u00b7 Largearealowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHH",
+          "family": "GLSZM",
+          "measure": "Largearealowgray-Levelemphasis",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -4.2117,
+          "qValue": 0.29032643399598596,
+          "direction": "Lower risk",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 50,
+          "feature": "wavelet-lll_glrlm_runlengthnonuniformity",
+          "display": "WAVELET LLL \u00b7 GLRLM \u00b7 Runlengthnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLL",
+          "family": "GLRLM",
+          "measure": "Runlengthnon-Uniformity",
+          "frequency": 0.0,
+          "coefficient": 0.0,
+          "effect": -2.7728,
+          "qValue": 0.011236808529287845,
+          "direction": "Lower risk",
+          "fdrSignificant": true,
+          "finalModel": false
+        }
+      ],
+      "featureGroups": {
+        "regions": [
+          {
+            "label": "Tumor",
+            "count": 20
+          }
+        ],
+        "families": [
+          {
+            "label": "GLSZM",
+            "count": 11
+          },
+          {
+            "label": "First order",
+            "count": 6
+          },
+          {
+            "label": "GLRLM",
+            "count": 2
+          },
+          {
+            "label": "GLDM",
+            "count": 1
+          }
+        ],
+        "transforms": [
+          {
+            "label": "LOG 5-0 MM",
+            "count": 7
+          },
+          {
+            "label": "WAVELET LHH",
+            "count": 3
+          },
+          {
+            "label": "WAVELET HLL",
+            "count": 2
+          },
+          {
+            "label": "WAVELET HHH",
+            "count": 2
+          },
+          {
+            "label": "WAVELET LLH",
+            "count": 2
+          },
+          {
+            "label": "LOG 3-0 MM",
+            "count": 1
+          },
+          {
+            "label": "WAVELET HHL",
+            "count": 1
+          },
+          {
+            "label": "WAVELET LHL",
+            "count": 1
+          },
+          {
+            "label": "LOG 1-0 MM",
+            "count": 1
+          }
+        ]
+      },
+      "validation": {
+        "outerDesign": "5-fold \u00d7 3 repeats",
+        "outerFits": 15,
+        "innerDesign": "3-fold grid search",
+        "bootstrap": 1000,
+        "bestKMode": 100,
+        "bestCMode": 0.1,
+        "medianActiveFeatures": 6,
+        "finalK": 100,
+        "finalC": 0.05,
+        "finalActiveFeatures": 10
+      },
+      "title": "Overall survival",
+      "shortTitle": "Survival",
+      "description": "Radiomics-only Cox proportional-hazards model predicting time to death from any cause.",
+      "targetDefinition": "OS_STATUS / OS_MONTHS from the Duke demography sheet (1 = death, 0 = censored at last contact); missing status/time or non-positive follow-up excluded. Disease-specific, disease-free, and progression-free survival fields exist in the source workbook but are empty for every patient, so only overall survival is modeled.",
+      "excludedCount": 212,
+      "prevalenceNote": "Death is uncommon in this cohort; the log-rank comparison and concordance interval both reflect that sparsity.",
+      "method": [
+        {
+          "step": "01",
+          "title": "Cohort & label audit",
+          "detail": "One row per patient; exact ID join; missing survival status, missing follow-up time, or non-positive follow-up excluded."
+        },
+        {
+          "step": "02",
+          "title": "Radiomics-only matrix",
+          "detail": "2,064 tumor and peritumoral-vessel features; menopause and receptor fields explicitly removed."
+        },
+        {
+          "step": "03",
+          "title": "Training-fold screen",
+          "detail": "Univariate concordance-index ranking (k = 25, 50, 100), then |Spearman \u03c1| \u2265 0.90 redundancy pruning."
+        },
+        {
+          "step": "04",
+          "title": "Sparse conventional model",
+          "detail": "Z-score scaling and elastic-net (L1-weighted) Cox proportional-hazards regression; penalizer tuned in the inner loop."
+        },
+        {
+          "step": "05",
+          "title": "Nested validation",
+          "detail": "5-fold \u00d7 3 repeated outer CV, 3-fold inner tuning, pooled out-of-fold risk scores, 1,000 bootstrap intervals."
+        },
+        {
+          "step": "06",
+          "title": "Stability ranking",
+          "detail": "Features ranked by outer-fold selection frequency, standardized coefficient magnitude, and univariate hazard ratio."
+        }
+      ]
+    },
+    "subtype": {
+      "key": "subtype",
+      "sampleCount": 772,
+      "classCount": 4,
+      "classes": [
+        {
+          "label": "Basal",
+          "count": 130,
+          "percent": 16.8
+        },
+        {
+          "label": "HER2-enriched",
+          "count": 50,
+          "percent": 6.5
+        },
+        {
+          "label": "Luminal A",
+          "count": 508,
+          "percent": 65.8
+        },
+        {
+          "label": "Luminal B",
+          "count": 84,
+          "percent": 10.9
+        }
+      ],
+      "metrics": [
+        {
+          "key": "macroRocAuc",
+          "label": "Macro ROC AUC",
+          "value": 0.548,
+          "low": 0.517,
+          "high": 0.583,
+          "higherBetter": true
+        },
+        {
+          "key": "balancedAccuracy",
+          "label": "Balanced accuracy",
+          "value": 0.327,
+          "low": 0.284,
+          "high": 0.372,
+          "higherBetter": true
+        },
+        {
+          "key": "macroF1",
+          "label": "Macro F1",
+          "value": 0.257,
+          "low": 0.23,
+          "high": 0.285,
+          "higherBetter": true
+        },
+        {
+          "key": "logLoss",
+          "label": "Log loss",
+          "value": 1.361,
+          "low": 1.329,
+          "high": 1.396,
+          "higherBetter": false
+        }
+      ],
+      "classAuc": [
+        {
+          "label": "Basal",
+          "auc": 0.457
+        },
+        {
+          "label": "HER2-enriched",
+          "auc": 0.65
+        },
+        {
+          "label": "Luminal A",
+          "auc": 0.602
+        },
+        {
+          "label": "Luminal B",
+          "auc": 0.483
+        }
+      ],
+      "rocCurves": [
+        {
+          "label": "Basal",
+          "auc": 0.457,
+          "points": [
+            {
+              "x": 0.0,
+              "y": 0.0
+            },
+            {
+              "x": 0.00467,
+              "y": 0.01538
+            },
+            {
+              "x": 0.02648,
+              "y": 0.02308
+            },
+            {
+              "x": 0.07165,
+              "y": 0.03077
+            },
+            {
+              "x": 0.07477,
+              "y": 0.04615
+            },
+            {
+              "x": 0.08411,
+              "y": 0.05385
+            },
+            {
+              "x": 0.0919,
+              "y": 0.06154
+            },
+            {
+              "x": 0.09346,
+              "y": 0.07692
+            },
+            {
+              "x": 0.10125,
+              "y": 0.08462
+            },
+            {
+              "x": 0.11526,
+              "y": 0.09231
+            },
+            {
+              "x": 0.11838,
+              "y": 0.10769
+            },
+            {
+              "x": 0.13863,
+              "y": 0.11538
+            },
+            {
+              "x": 0.15576,
+              "y": 0.12308
+            },
+            {
+              "x": 0.19315,
+              "y": 0.14615
+            },
+            {
+              "x": 0.19626,
+              "y": 0.16154
+            },
+            {
+              "x": 0.21028,
+              "y": 0.16923
+            },
+            {
+              "x": 0.21963,
+              "y": 0.18462
+            },
+            {
+              "x": 0.23676,
+              "y": 0.19231
+            },
+            {
+              "x": 0.25389,
+              "y": 0.2
+            },
+            {
+              "x": 0.28037,
+              "y": 0.22308
+            },
+            {
+              "x": 0.30997,
+              "y": 0.23077
+            },
+            {
+              "x": 0.31464,
+              "y": 0.23846
+            },
+            {
+              "x": 0.32243,
+              "y": 0.26154
+            },
+            {
+              "x": 0.32399,
+              "y": 0.27692
+            },
+            {
+              "x": 0.3271,
+              "y": 0.28462
+            },
+            {
+              "x": 0.33333,
+              "y": 0.3
+            },
+            {
+              "x": 0.34891,
+              "y": 0.30769
+            },
+            {
+              "x": 0.35981,
+              "y": 0.31538
+            },
+            {
+              "x": 0.36137,
+              "y": 0.33077
+            },
+            {
+              "x": 0.36449,
+              "y": 0.33846
+            },
+            {
+              "x": 0.37383,
+              "y": 0.34615
+            },
+            {
+              "x": 0.37695,
+              "y": 0.36923
+            },
+            {
+              "x": 0.39252,
+              "y": 0.37692
+            },
+            {
+              "x": 0.42056,
+              "y": 0.38462
+            },
+            {
+              "x": 0.43302,
+              "y": 0.4
+            },
+            {
+              "x": 0.43458,
+              "y": 0.40769
+            },
+            {
+              "x": 0.47196,
+              "y": 0.41538
+            },
+            {
+              "x": 0.47508,
+              "y": 0.43846
+            },
+            {
+              "x": 0.49221,
+              "y": 0.44615
+            },
+            {
+              "x": 0.50623,
+              "y": 0.45385
+            },
+            {
+              "x": 0.5109,
+              "y": 0.47692
+            },
+            {
+              "x": 0.53583,
+              "y": 0.48462
+            },
+            {
+              "x": 0.54984,
+              "y": 0.49231
+            },
+            {
+              "x": 0.57165,
+              "y": 0.50769
+            },
+            {
+              "x": 0.59813,
+              "y": 0.51538
+            },
+            {
+              "x": 0.60748,
+              "y": 0.52308
+            },
+            {
+              "x": 0.60903,
+              "y": 0.55385
+            },
+            {
+              "x": 0.61682,
+              "y": 0.56154
+            },
+            {
+              "x": 0.66978,
+              "y": 0.56923
+            },
+            {
+              "x": 0.67913,
+              "y": 0.58462
+            },
+            {
+              "x": 0.6947,
+              "y": 0.59231
+            },
+            {
+              "x": 0.70561,
+              "y": 0.6
+            },
+            {
+              "x": 0.70717,
+              "y": 0.61538
+            },
+            {
+              "x": 0.72897,
+              "y": 0.62308
+            },
+            {
+              "x": 0.73209,
+              "y": 0.63077
+            },
+            {
+              "x": 0.73364,
+              "y": 0.64615
+            },
+            {
+              "x": 0.74455,
+              "y": 0.65385
+            },
+            {
+              "x": 0.74611,
+              "y": 0.66923
+            },
+            {
+              "x": 0.74766,
+              "y": 0.68462
+            },
+            {
+              "x": 0.7648,
+              "y": 0.69231
+            },
+            {
+              "x": 0.76791,
+              "y": 0.70769
+            },
+            {
+              "x": 0.77103,
+              "y": 0.74615
+            },
+            {
+              "x": 0.7866,
+              "y": 0.75385
+            },
+            {
+              "x": 0.8162,
+              "y": 0.76923
+            },
+            {
+              "x": 0.84112,
+              "y": 0.78462
+            },
+            {
+              "x": 0.85047,
+              "y": 0.80769
+            },
+            {
+              "x": 0.85358,
+              "y": 0.81538
+            },
+            {
+              "x": 0.85981,
+              "y": 0.84615
+            },
+            {
+              "x": 0.87539,
+              "y": 0.86154
+            },
+            {
+              "x": 0.87695,
+              "y": 0.86923
+            },
+            {
+              "x": 0.88006,
+              "y": 0.88462
+            },
+            {
+              "x": 0.93614,
+              "y": 0.9
+            },
+            {
+              "x": 0.94081,
+              "y": 0.90769
+            },
+            {
+              "x": 0.94237,
+              "y": 0.92308
+            },
+            {
+              "x": 0.96262,
+              "y": 0.93846
+            },
+            {
+              "x": 0.96729,
+              "y": 0.94615
+            },
+            {
+              "x": 0.98442,
+              "y": 0.96154
+            },
+            {
+              "x": 0.99533,
+              "y": 0.97692
+            },
+            {
+              "x": 0.99688,
+              "y": 0.98462
+            },
+            {
+              "x": 1.0,
+              "y": 1.0
+            }
+          ]
+        },
+        {
+          "label": "HER2-enriched",
+          "auc": 0.65,
+          "points": [
+            {
+              "x": 0.0,
+              "y": 0.0
+            },
+            {
+              "x": 0.00139,
+              "y": 0.0
+            },
+            {
+              "x": 0.04155,
+              "y": 0.0
+            },
+            {
+              "x": 0.04155,
+              "y": 0.04
+            },
+            {
+              "x": 0.06233,
+              "y": 0.06
+            },
+            {
+              "x": 0.0651,
+              "y": 0.06
+            },
+            {
+              "x": 0.0651,
+              "y": 0.08
+            },
+            {
+              "x": 0.06925,
+              "y": 0.08
+            },
+            {
+              "x": 0.06925,
+              "y": 0.1
+            },
+            {
+              "x": 0.08172,
+              "y": 0.1
+            },
+            {
+              "x": 0.08587,
+              "y": 0.12
+            },
+            {
+              "x": 0.08587,
+              "y": 0.14
+            },
+            {
+              "x": 0.08726,
+              "y": 0.14
+            },
+            {
+              "x": 0.08726,
+              "y": 0.16
+            },
+            {
+              "x": 0.09003,
+              "y": 0.16
+            },
+            {
+              "x": 0.09003,
+              "y": 0.18
+            },
+            {
+              "x": 0.09695,
+              "y": 0.2
+            },
+            {
+              "x": 0.10665,
+              "y": 0.2
+            },
+            {
+              "x": 0.10665,
+              "y": 0.22
+            },
+            {
+              "x": 0.10803,
+              "y": 0.22
+            },
+            {
+              "x": 0.10803,
+              "y": 0.24
+            },
+            {
+              "x": 0.11219,
+              "y": 0.24
+            },
+            {
+              "x": 0.12604,
+              "y": 0.26
+            },
+            {
+              "x": 0.12604,
+              "y": 0.28
+            },
+            {
+              "x": 0.13158,
+              "y": 0.28
+            },
+            {
+              "x": 0.13158,
+              "y": 0.32
+            },
+            {
+              "x": 0.13435,
+              "y": 0.32
+            },
+            {
+              "x": 0.13435,
+              "y": 0.34
+            },
+            {
+              "x": 0.14266,
+              "y": 0.36
+            },
+            {
+              "x": 0.15235,
+              "y": 0.36
+            },
+            {
+              "x": 0.15235,
+              "y": 0.38
+            },
+            {
+              "x": 0.15374,
+              "y": 0.38
+            },
+            {
+              "x": 0.15374,
+              "y": 0.4
+            },
+            {
+              "x": 0.15789,
+              "y": 0.4
+            },
+            {
+              "x": 0.1662,
+              "y": 0.44
+            },
+            {
+              "x": 0.1662,
+              "y": 0.46
+            },
+            {
+              "x": 0.17036,
+              "y": 0.46
+            },
+            {
+              "x": 0.17036,
+              "y": 0.48
+            },
+            {
+              "x": 0.21191,
+              "y": 0.48
+            },
+            {
+              "x": 0.21191,
+              "y": 0.5
+            },
+            {
+              "x": 0.24238,
+              "y": 0.52
+            },
+            {
+              "x": 0.2687,
+              "y": 0.52
+            },
+            {
+              "x": 0.2687,
+              "y": 0.54
+            },
+            {
+              "x": 0.27008,
+              "y": 0.54
+            },
+            {
+              "x": 0.27008,
+              "y": 0.56
+            },
+            {
+              "x": 0.2867,
+              "y": 0.56
+            },
+            {
+              "x": 0.29778,
+              "y": 0.58
+            },
+            {
+              "x": 0.29778,
+              "y": 0.6
+            },
+            {
+              "x": 0.32271,
+              "y": 0.6
+            },
+            {
+              "x": 0.32271,
+              "y": 0.62
+            },
+            {
+              "x": 0.35319,
+              "y": 0.62
+            },
+            {
+              "x": 0.35319,
+              "y": 0.64
+            },
+            {
+              "x": 0.45568,
+              "y": 0.66
+            },
+            {
+              "x": 0.45845,
+              "y": 0.66
+            },
+            {
+              "x": 0.45845,
+              "y": 0.7
+            },
+            {
+              "x": 0.47784,
+              "y": 0.7
+            },
+            {
+              "x": 0.47784,
+              "y": 0.72
+            },
+            {
+              "x": 0.57202,
+              "y": 0.72
+            },
+            {
+              "x": 0.62327,
+              "y": 0.74
+            },
+            {
+              "x": 0.62327,
+              "y": 0.76
+            },
+            {
+              "x": 0.63158,
+              "y": 0.76
+            },
+            {
+              "x": 0.63158,
+              "y": 0.8
+            },
+            {
+              "x": 0.68421,
+              "y": 0.8
+            },
+            {
+              "x": 0.68421,
+              "y": 0.82
+            },
+            {
+              "x": 0.71191,
+              "y": 0.84
+            },
+            {
+              "x": 0.74792,
+              "y": 0.84
+            },
+            {
+              "x": 0.74792,
+              "y": 0.86
+            },
+            {
+              "x": 0.77978,
+              "y": 0.86
+            },
+            {
+              "x": 0.77978,
+              "y": 0.88
+            },
+            {
+              "x": 0.7964,
+              "y": 0.88
+            },
+            {
+              "x": 0.82687,
+              "y": 0.9
+            },
+            {
+              "x": 0.82687,
+              "y": 0.92
+            },
+            {
+              "x": 0.86842,
+              "y": 0.92
+            },
+            {
+              "x": 0.86842,
+              "y": 0.94
+            },
+            {
+              "x": 0.90859,
+              "y": 0.94
+            },
+            {
+              "x": 0.90859,
+              "y": 0.96
+            },
+            {
+              "x": 0.97368,
+              "y": 0.98
+            },
+            {
+              "x": 0.98061,
+              "y": 0.98
+            },
+            {
+              "x": 0.98061,
+              "y": 1.0
+            },
+            {
+              "x": 1.0,
+              "y": 1.0
+            }
+          ]
+        },
+        {
+          "label": "Luminal A",
+          "auc": 0.602,
+          "points": [
+            {
+              "x": 0.0,
+              "y": 0.0
+            },
+            {
+              "x": 0.00758,
+              "y": 0.01772
+            },
+            {
+              "x": 0.02273,
+              "y": 0.04724
+            },
+            {
+              "x": 0.03409,
+              "y": 0.06299
+            },
+            {
+              "x": 0.04167,
+              "y": 0.08465
+            },
+            {
+              "x": 0.05682,
+              "y": 0.1063
+            },
+            {
+              "x": 0.06439,
+              "y": 0.15354
+            },
+            {
+              "x": 0.07576,
+              "y": 0.16535
+            },
+            {
+              "x": 0.08333,
+              "y": 0.19488
+            },
+            {
+              "x": 0.09848,
+              "y": 0.20472
+            },
+            {
+              "x": 0.10606,
+              "y": 0.22244
+            },
+            {
+              "x": 0.11364,
+              "y": 0.23031
+            },
+            {
+              "x": 0.12879,
+              "y": 0.25591
+            },
+            {
+              "x": 0.13636,
+              "y": 0.28346
+            },
+            {
+              "x": 0.1553,
+              "y": 0.29921
+            },
+            {
+              "x": 0.16667,
+              "y": 0.30512
+            },
+            {
+              "x": 0.17803,
+              "y": 0.31693
+            },
+            {
+              "x": 0.19318,
+              "y": 0.32087
+            },
+            {
+              "x": 0.20076,
+              "y": 0.32874
+            },
+            {
+              "x": 0.21591,
+              "y": 0.35236
+            },
+            {
+              "x": 0.22348,
+              "y": 0.36614
+            },
+            {
+              "x": 0.23106,
+              "y": 0.37402
+            },
+            {
+              "x": 0.25379,
+              "y": 0.37795
+            },
+            {
+              "x": 0.27273,
+              "y": 0.39764
+            },
+            {
+              "x": 0.2803,
+              "y": 0.40748
+            },
+            {
+              "x": 0.28788,
+              "y": 0.41929
+            },
+            {
+              "x": 0.29545,
+              "y": 0.44291
+            },
+            {
+              "x": 0.30682,
+              "y": 0.46654
+            },
+            {
+              "x": 0.31818,
+              "y": 0.47244
+            },
+            {
+              "x": 0.32955,
+              "y": 0.48622
+            },
+            {
+              "x": 0.35227,
+              "y": 0.49016
+            },
+            {
+              "x": 0.35985,
+              "y": 0.50591
+            },
+            {
+              "x": 0.36742,
+              "y": 0.52559
+            },
+            {
+              "x": 0.37879,
+              "y": 0.54331
+            },
+            {
+              "x": 0.38636,
+              "y": 0.55709
+            },
+            {
+              "x": 0.40909,
+              "y": 0.5689
+            },
+            {
+              "x": 0.42045,
+              "y": 0.57283
+            },
+            {
+              "x": 0.43561,
+              "y": 0.58465
+            },
+            {
+              "x": 0.45076,
+              "y": 0.59252
+            },
+            {
+              "x": 0.46591,
+              "y": 0.60827
+            },
+            {
+              "x": 0.47348,
+              "y": 0.62205
+            },
+            {
+              "x": 0.48485,
+              "y": 0.6378
+            },
+            {
+              "x": 0.49242,
+              "y": 0.64961
+            },
+            {
+              "x": 0.51136,
+              "y": 0.66732
+            },
+            {
+              "x": 0.51894,
+              "y": 0.68307
+            },
+            {
+              "x": 0.5303,
+              "y": 0.69094
+            },
+            {
+              "x": 0.54167,
+              "y": 0.70276
+            },
+            {
+              "x": 0.56818,
+              "y": 0.72244
+            },
+            {
+              "x": 0.57576,
+              "y": 0.72835
+            },
+            {
+              "x": 0.58712,
+              "y": 0.73819
+            },
+            {
+              "x": 0.60227,
+              "y": 0.74409
+            },
+            {
+              "x": 0.61742,
+              "y": 0.75394
+            },
+            {
+              "x": 0.64015,
+              "y": 0.75787
+            },
+            {
+              "x": 0.65152,
+              "y": 0.76181
+            },
+            {
+              "x": 0.66667,
+              "y": 0.77362
+            },
+            {
+              "x": 0.67424,
+              "y": 0.77756
+            },
+            {
+              "x": 0.68561,
+              "y": 0.78543
+            },
+            {
+              "x": 0.69697,
+              "y": 0.79921
+            },
+            {
+              "x": 0.73864,
+              "y": 0.80512
+            },
+            {
+              "x": 0.77273,
+              "y": 0.80906
+            },
+            {
+              "x": 0.7803,
+              "y": 0.82087
+            },
+            {
+              "x": 0.79167,
+              "y": 0.83465
+            },
+            {
+              "x": 0.80303,
+              "y": 0.85433
+            },
+            {
+              "x": 0.81061,
+              "y": 0.86614
+            },
+            {
+              "x": 0.82576,
+              "y": 0.87402
+            },
+            {
+              "x": 0.83333,
+              "y": 0.87795
+            },
+            {
+              "x": 0.8447,
+              "y": 0.88583
+            },
+            {
+              "x": 0.85606,
+              "y": 0.89567
+            },
+            {
+              "x": 0.86364,
+              "y": 0.90945
+            },
+            {
+              "x": 0.875,
+              "y": 0.91732
+            },
+            {
+              "x": 0.88636,
+              "y": 0.9252
+            },
+            {
+              "x": 0.90909,
+              "y": 0.93898
+            },
+            {
+              "x": 0.92045,
+              "y": 0.95079
+            },
+            {
+              "x": 0.93182,
+              "y": 0.95472
+            },
+            {
+              "x": 0.94318,
+              "y": 0.96654
+            },
+            {
+              "x": 0.95076,
+              "y": 0.97244
+            },
+            {
+              "x": 0.96591,
+              "y": 0.98228
+            },
+            {
+              "x": 0.97348,
+              "y": 0.98622
+            },
+            {
+              "x": 0.99242,
+              "y": 0.99213
+            },
+            {
+              "x": 1.0,
+              "y": 1.0
+            }
+          ]
+        },
+        {
+          "label": "Luminal B",
+          "auc": 0.483,
+          "points": [
+            {
+              "x": 0.0,
+              "y": 0.0
+            },
+            {
+              "x": 0.00145,
+              "y": 0.0119
+            },
+            {
+              "x": 0.01017,
+              "y": 0.02381
+            },
+            {
+              "x": 0.0407,
+              "y": 0.03571
+            },
+            {
+              "x": 0.05087,
+              "y": 0.03571
+            },
+            {
+              "x": 0.08576,
+              "y": 0.04762
+            },
+            {
+              "x": 0.1032,
+              "y": 0.05952
+            },
+            {
+              "x": 0.16424,
+              "y": 0.07143
+            },
+            {
+              "x": 0.16715,
+              "y": 0.08333
+            },
+            {
+              "x": 0.1686,
+              "y": 0.09524
+            },
+            {
+              "x": 0.17587,
+              "y": 0.10714
+            },
+            {
+              "x": 0.17587,
+              "y": 0.11905
+            },
+            {
+              "x": 0.1875,
+              "y": 0.13095
+            },
+            {
+              "x": 0.19477,
+              "y": 0.14286
+            },
+            {
+              "x": 0.19622,
+              "y": 0.15476
+            },
+            {
+              "x": 0.2093,
+              "y": 0.16667
+            },
+            {
+              "x": 0.26017,
+              "y": 0.17857
+            },
+            {
+              "x": 0.27471,
+              "y": 0.19048
+            },
+            {
+              "x": 0.28198,
+              "y": 0.19048
+            },
+            {
+              "x": 0.29651,
+              "y": 0.21429
+            },
+            {
+              "x": 0.30233,
+              "y": 0.22619
+            },
+            {
+              "x": 0.30669,
+              "y": 0.2381
+            },
+            {
+              "x": 0.30814,
+              "y": 0.25
+            },
+            {
+              "x": 0.31541,
+              "y": 0.2619
+            },
+            {
+              "x": 0.31686,
+              "y": 0.27381
+            },
+            {
+              "x": 0.33576,
+              "y": 0.28571
+            },
+            {
+              "x": 0.33576,
+              "y": 0.29762
+            },
+            {
+              "x": 0.34157,
+              "y": 0.30952
+            },
+            {
+              "x": 0.34593,
+              "y": 0.32143
+            },
+            {
+              "x": 0.3561,
+              "y": 0.33333
+            },
+            {
+              "x": 0.37355,
+              "y": 0.34524
+            },
+            {
+              "x": 0.37645,
+              "y": 0.36905
+            },
+            {
+              "x": 0.38808,
+              "y": 0.38095
+            },
+            {
+              "x": 0.38953,
+              "y": 0.38095
+            },
+            {
+              "x": 0.42442,
+              "y": 0.39286
+            },
+            {
+              "x": 0.44041,
+              "y": 0.41667
+            },
+            {
+              "x": 0.44186,
+              "y": 0.42857
+            },
+            {
+              "x": 0.45494,
+              "y": 0.44048
+            },
+            {
+              "x": 0.46657,
+              "y": 0.45238
+            },
+            {
+              "x": 0.4811,
+              "y": 0.46429
+            },
+            {
+              "x": 0.4811,
+              "y": 0.47619
+            },
+            {
+              "x": 0.49419,
+              "y": 0.4881
+            },
+            {
+              "x": 0.51017,
+              "y": 0.5
+            },
+            {
+              "x": 0.52326,
+              "y": 0.5119
+            },
+            {
+              "x": 0.53779,
+              "y": 0.52381
+            },
+            {
+              "x": 0.59302,
+              "y": 0.53571
+            },
+            {
+              "x": 0.59593,
+              "y": 0.57143
+            },
+            {
+              "x": 0.59738,
+              "y": 0.57143
+            },
+            {
+              "x": 0.60174,
+              "y": 0.58333
+            },
+            {
+              "x": 0.6032,
+              "y": 0.59524
+            },
+            {
+              "x": 0.61773,
+              "y": 0.60714
+            },
+            {
+              "x": 0.63808,
+              "y": 0.61905
+            },
+            {
+              "x": 0.6439,
+              "y": 0.64286
+            },
+            {
+              "x": 0.66134,
+              "y": 0.65476
+            },
+            {
+              "x": 0.66134,
+              "y": 0.66667
+            },
+            {
+              "x": 0.67442,
+              "y": 0.67857
+            },
+            {
+              "x": 0.69477,
+              "y": 0.69048
+            },
+            {
+              "x": 0.69622,
+              "y": 0.70238
+            },
+            {
+              "x": 0.71221,
+              "y": 0.71429
+            },
+            {
+              "x": 0.72093,
+              "y": 0.72619
+            },
+            {
+              "x": 0.7282,
+              "y": 0.7381
+            },
+            {
+              "x": 0.73256,
+              "y": 0.75
+            },
+            {
+              "x": 0.73547,
+              "y": 0.75
+            },
+            {
+              "x": 0.76163,
+              "y": 0.7619
+            },
+            {
+              "x": 0.78052,
+              "y": 0.77381
+            },
+            {
+              "x": 0.79506,
+              "y": 0.80952
+            },
+            {
+              "x": 0.79651,
+              "y": 0.82143
+            },
+            {
+              "x": 0.83721,
+              "y": 0.83333
+            },
+            {
+              "x": 0.83866,
+              "y": 0.85714
+            },
+            {
+              "x": 0.83866,
+              "y": 0.86905
+            },
+            {
+              "x": 0.84884,
+              "y": 0.89286
+            },
+            {
+              "x": 0.87355,
+              "y": 0.90476
+            },
+            {
+              "x": 0.875,
+              "y": 0.91667
+            },
+            {
+              "x": 0.89099,
+              "y": 0.92857
+            },
+            {
+              "x": 0.89826,
+              "y": 0.94048
+            },
+            {
+              "x": 0.92151,
+              "y": 0.96429
+            },
+            {
+              "x": 0.94186,
+              "y": 0.96429
+            },
+            {
+              "x": 0.95058,
+              "y": 0.97619
+            },
+            {
+              "x": 0.97238,
+              "y": 0.9881
+            },
+            {
+              "x": 1.0,
+              "y": 1.0
+            }
+          ]
+        }
+      ],
+      "prCurve": [],
+      "calibration": [],
+      "confusion": {
+        "labels": [
+          "Basal",
+          "HER2-enriched",
+          "Luminal A",
+          "Luminal B"
+        ],
+        "counts": [
+          [
+            12,
+            38,
+            40,
+            40
+          ],
+          [
+            8,
+            22,
+            8,
+            12
+          ],
+          [
+            43,
+            101,
+            206,
+            158
+          ],
+          [
+            16,
+            12,
+            25,
+            31
+          ]
+        ],
+        "normalized": [
+          [
+            0.092,
+            0.292,
+            0.308,
+            0.308
+          ],
+          [
+            0.16,
+            0.44,
+            0.16,
+            0.24
+          ],
+          [
+            0.085,
+            0.199,
+            0.406,
+            0.311
+          ],
+          [
+            0.19,
+            0.143,
+            0.298,
+            0.369
+          ]
+        ]
+      },
+      "featureFunnel": [
+        {
+          "label": "Radiomic input",
+          "count": 2064,
+          "note": "Tumor + vessel regions"
+        },
+        {
+          "label": "QC retained",
+          "count": 2064,
+          "note": "No missing, infinite, or constant features"
+        },
+        {
+          "label": "Univariate FDR",
+          "count": 597,
+          "note": "Benjamini\u2013Hochberg q < 0.05"
+        },
+        {
+          "label": "Nonredundant FDR",
+          "count": 88,
+          "note": "|Spearman \u03c1| < 0.90 representatives"
+        },
+        {
+          "label": "Stable L1",
+          "count": 4,
+          "note": "Selected in \u226550% of outer folds"
+        }
+      ],
+      "features": [
+        {
+          "rank": 1,
+          "feature": "log-sigma-3-0-mm-3d_glszm_graylevelnonuniformitynormalized",
+          "display": "LOG 3-0 MM \u00b7 GLSZM \u00b7 Gray-Levelnon-Uniformitynormalized \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelnon-Uniformitynormalized",
+          "frequency": 0.667,
+          "coefficient": 0.0899,
+          "effect": 0.0502,
+          "qValue": 2.05792817354415e-05,
+          "direction": "Higher \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 2,
+          "feature": "log-sigma-1-0-mm-3d_glszm_zoneentropy",
+          "display": "LOG 1-0 MM \u00b7 GLSZM \u00b7 Zoneentropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 1-0 MM",
+          "family": "GLSZM",
+          "measure": "Zoneentropy",
+          "frequency": 0.667,
+          "coefficient": 0.0746,
+          "effect": 0.0395,
+          "qValue": 0.00017436630388445145,
+          "direction": "Lower \u2192 Luminal A",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 3,
+          "feature": "log-sigma-5-0-mm-3d_glszm_graylevelnonuniformitynormalized",
+          "display": "LOG 5-0 MM \u00b7 GLSZM \u00b7 Gray-Levelnon-Uniformitynormalized \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelnon-Uniformitynormalized",
+          "frequency": 0.6,
+          "coefficient": 0.0518,
+          "effect": 0.0458,
+          "qValue": 5.116119468918977e-05,
+          "direction": "Higher \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 4,
+          "feature": "wavelet-hlh_glszm_smallareaemphasis",
+          "display": "WAVELET HLH \u00b7 GLSZM \u00b7 Smallareaemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLH",
+          "family": "GLSZM",
+          "measure": "Smallareaemphasis",
+          "frequency": 0.533,
+          "coefficient": 0.0414,
+          "effect": 0.0399,
+          "qValue": 0.00016923915874853942,
+          "direction": "Higher \u2192 Basal",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 5,
+          "feature": "wavelet-lll_glszm_sizezonenonuniformity",
+          "display": "WAVELET LLL \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLL",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.467,
+          "coefficient": 0.0387,
+          "effect": 0.0433,
+          "qValue": 8.22155162916789e-05,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 6,
+          "feature": "wavelet-lll_glszm_zoneentropy",
+          "display": "WAVELET LLL \u00b7 GLSZM \u00b7 Zoneentropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLL",
+          "family": "GLSZM",
+          "measure": "Zoneentropy",
+          "frequency": 0.4,
+          "coefficient": 0.0941,
+          "effect": 0.0355,
+          "qValue": 0.00024390740497424977,
+          "direction": "Higher \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 7,
+          "feature": "wavelet-hll_firstorder_energy",
+          "display": "WAVELET HLL \u00b7 First order \u00b7 Energy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLL",
+          "family": "First order",
+          "measure": "Energy",
+          "frequency": 0.4,
+          "coefficient": 0.0863,
+          "effect": 0.0341,
+          "qValue": 0.00024390740497424977,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 8,
+          "feature": "wavelet-hlh_glcm_imc2",
+          "display": "WAVELET HLH \u00b7 GLCM \u00b7 Imc2 \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLH",
+          "family": "GLCM",
+          "measure": "Imc2",
+          "frequency": 0.4,
+          "coefficient": 0.0824,
+          "effect": 0.0349,
+          "qValue": 0.00024390740497424977,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 9,
+          "feature": "wavelet-hlh_gldm_smalldependencehighgraylevelemphasis",
+          "display": "WAVELET HLH \u00b7 GLDM \u00b7 Smalldependence Highgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLH",
+          "family": "GLDM",
+          "measure": "Smalldependence Highgray-Levelemphasis",
+          "frequency": 0.4,
+          "coefficient": 0.0567,
+          "effect": 0.0363,
+          "qValue": 0.00024390740497424977,
+          "direction": "Higher \u2192 Luminal A",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 10,
+          "feature": "wavelet-llh_gldm_dependencevariance",
+          "display": "WAVELET LLH \u00b7 GLDM \u00b7 Dependence Variance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLDM",
+          "measure": "Dependence Variance",
+          "frequency": 0.333,
+          "coefficient": 0.122,
+          "effect": 0.0352,
+          "qValue": 0.00024390740497424977,
+          "direction": "Higher \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 11,
+          "feature": "wavelet-hhl_glszm_sizezonenonuniformity",
+          "display": "WAVELET HHL \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHL",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.333,
+          "coefficient": 0.0932,
+          "effect": 0.0416,
+          "qValue": 0.00012009902160844246,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 12,
+          "feature": "log-sigma-3-0-mm-3d_glcm_maximumprobability",
+          "display": "LOG 3-0 MM \u00b7 GLCM \u00b7 Maximumprobability \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLCM",
+          "measure": "Maximumprobability",
+          "frequency": 0.333,
+          "coefficient": 0.0648,
+          "effect": 0.0302,
+          "qValue": 0.0003945252979607668,
+          "direction": "Higher \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 13,
+          "feature": "wavelet-lhh_glcm_imc2",
+          "display": "WAVELET LHH \u00b7 GLCM \u00b7 Imc2 \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "GLCM",
+          "measure": "Imc2",
+          "frequency": 0.333,
+          "coefficient": 0.062,
+          "effect": 0.0344,
+          "qValue": 0.00024390740497424977,
+          "direction": "Lower \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 14,
+          "feature": "log-sigma-3-0-mm-3d_glszm_graylevelvariance",
+          "display": "LOG 3-0 MM \u00b7 GLSZM \u00b7 Gray-Levelvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelvariance",
+          "frequency": 0.333,
+          "coefficient": 0.057,
+          "effect": 0.0491,
+          "qValue": 2.05792817354415e-05,
+          "direction": "Higher \u2192 Luminal A",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 15,
+          "feature": "wavelet-llh_glszm_smallareaemphasis",
+          "display": "WAVELET LLH \u00b7 GLSZM \u00b7 Smallareaemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLSZM",
+          "measure": "Smallareaemphasis",
+          "frequency": 0.333,
+          "coefficient": 0.0404,
+          "effect": 0.0372,
+          "qValue": 0.0002220398533100566,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 16,
+          "feature": "log-sigma-5-0-mm-3d_glszm_graylevelnonuniformity",
+          "display": "LOG 5-0 MM \u00b7 GLSZM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.333,
+          "coefficient": 0.0331,
+          "effect": 0.0344,
+          "qValue": 0.00024390740497424977,
+          "direction": "Lower \u2192 Basal",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 17,
+          "feature": "log-sigma-5-0-mm-3d_glszm_graylevelvariance",
+          "display": "LOG 5-0 MM \u00b7 GLSZM \u00b7 Gray-Levelvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelvariance",
+          "frequency": 0.267,
+          "coefficient": 0.0533,
+          "effect": 0.0437,
+          "qValue": 8.22155162916789e-05,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 18,
+          "feature": "wavelet-lhl_glcm_imc2",
+          "display": "WAVELET LHL \u00b7 GLCM \u00b7 Imc2 \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHL",
+          "family": "GLCM",
+          "measure": "Imc2",
+          "frequency": 0.267,
+          "coefficient": 0.0421,
+          "effect": 0.0326,
+          "qValue": 0.0002533776115380166,
+          "direction": "Higher \u2192 Luminal A",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 19,
+          "feature": "log-sigma-3-0-mm-3d_glszm_sizezonenonuniformity",
+          "display": "LOG 3-0 MM \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.267,
+          "coefficient": 0.0253,
+          "effect": 0.037,
+          "qValue": 0.0002220398533100566,
+          "direction": "Lower \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 20,
+          "feature": "wavelet-lhh_glszm_graylevelvariance",
+          "display": "WAVELET LHH \u00b7 GLSZM \u00b7 Gray-Levelvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "GLSZM",
+          "measure": "Gray-Levelvariance",
+          "frequency": 0.2,
+          "coefficient": 0.0938,
+          "effect": 0.0338,
+          "qValue": 0.00024390740497424977,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 21,
+          "feature": "log-sigma-5-0-mm-3d_glszm_sizezonenonuniformity",
+          "display": "LOG 5-0 MM \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.2,
+          "coefficient": 0.0834,
+          "effect": 0.024,
+          "qValue": 0.0019993402561470125,
+          "direction": "Higher \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 22,
+          "feature": "wavelet-hll_glszm_graylevelvariance",
+          "display": "WAVELET HLL \u00b7 GLSZM \u00b7 Gray-Levelvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLL",
+          "family": "GLSZM",
+          "measure": "Gray-Levelvariance",
+          "frequency": 0.2,
+          "coefficient": 0.079,
+          "effect": 0.0352,
+          "qValue": 0.00024390740497424977,
+          "direction": "Lower \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 23,
+          "feature": "wavelet-hll_gldm_dependencevariance",
+          "display": "WAVELET HLL \u00b7 GLDM \u00b7 Dependence Variance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLL",
+          "family": "GLDM",
+          "measure": "Dependence Variance",
+          "frequency": 0.2,
+          "coefficient": 0.0757,
+          "effect": 0.0304,
+          "qValue": 0.00037231799826003436,
+          "direction": "Higher \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 24,
+          "feature": "log-sigma-3-0-mm-3d_gldm_smalldependencehighgraylevelemphasis",
+          "display": "LOG 3-0 MM \u00b7 GLDM \u00b7 Smalldependence Highgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLDM",
+          "measure": "Smalldependence Highgray-Levelemphasis",
+          "frequency": 0.2,
+          "coefficient": 0.0569,
+          "effect": 0.0382,
+          "qValue": 0.00018696183115604143,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 25,
+          "feature": "wavelet-llh_glrlm_graylevelvariance",
+          "display": "WAVELET LLH \u00b7 GLRLM \u00b7 Gray-Levelvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLRLM",
+          "measure": "Gray-Levelvariance",
+          "frequency": 0.133,
+          "coefficient": 0.1746,
+          "effect": 0.0351,
+          "qValue": 0.00024390740497424977,
+          "direction": "Higher \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 26,
+          "feature": "wavelet-lhh_firstorder_energy",
+          "display": "WAVELET LHH \u00b7 First order \u00b7 Energy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "First order",
+          "measure": "Energy",
+          "frequency": 0.133,
+          "coefficient": 0.1565,
+          "effect": 0.0338,
+          "qValue": 0.00024390740497424977,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 27,
+          "feature": "wavelet-lhh_glszm_smallareaemphasis",
+          "display": "WAVELET LHH \u00b7 GLSZM \u00b7 Smallareaemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "GLSZM",
+          "measure": "Smallareaemphasis",
+          "frequency": 0.133,
+          "coefficient": 0.1249,
+          "effect": 0.0334,
+          "qValue": 0.00024935063457607866,
+          "direction": "Lower \u2192 Basal",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 28,
+          "feature": "wavelet-llh_glcm_sumentropy",
+          "display": "WAVELET LLH \u00b7 GLCM \u00b7 Sumentropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLCM",
+          "measure": "Sumentropy",
+          "frequency": 0.133,
+          "coefficient": 0.097,
+          "effect": 0.0377,
+          "qValue": 0.0001978046656610468,
+          "direction": "Higher \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 29,
+          "feature": "wavelet-hll_gldm_smalldependencehighgraylevelemphasis",
+          "display": "WAVELET HLL \u00b7 GLDM \u00b7 Smalldependence Highgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLL",
+          "family": "GLDM",
+          "measure": "Smalldependence Highgray-Levelemphasis",
+          "frequency": 0.133,
+          "coefficient": 0.0628,
+          "effect": 0.0347,
+          "qValue": 0.00024390740497424977,
+          "direction": "Lower \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 30,
+          "feature": "wavelet-lhh_gldm_smalldependencelowgraylevelemphasis",
+          "display": "WAVELET LHH \u00b7 GLDM \u00b7 Smalldependence Lowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "GLDM",
+          "measure": "Smalldependence Lowgray-Levelemphasis",
+          "frequency": 0.133,
+          "coefficient": 0.0623,
+          "effect": 0.0309,
+          "qValue": 0.0003486579301886107,
+          "direction": "Lower \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 31,
+          "feature": "wavelet-hhh_gldm_smalldependencehighgraylevelemphasis",
+          "display": "WAVELET HHH \u00b7 GLDM \u00b7 Smalldependence Highgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHH",
+          "family": "GLDM",
+          "measure": "Smalldependence Highgray-Levelemphasis",
+          "frequency": 0.133,
+          "coefficient": 0.054,
+          "effect": 0.0338,
+          "qValue": 0.00024390740497424977,
+          "direction": "Higher \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 32,
+          "feature": "wavelet-hll_glcm_differencevariance",
+          "display": "WAVELET HLL \u00b7 GLCM \u00b7 Differencevariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLL",
+          "family": "GLCM",
+          "measure": "Differencevariance",
+          "frequency": 0.133,
+          "coefficient": 0.052,
+          "effect": 0.0364,
+          "qValue": 0.00024390740497424977,
+          "direction": "Lower \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 33,
+          "feature": "wavelet-hlh_glszm_graylevelvariance",
+          "display": "WAVELET HLH \u00b7 GLSZM \u00b7 Gray-Levelvariance \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLH",
+          "family": "GLSZM",
+          "measure": "Gray-Levelvariance",
+          "frequency": 0.133,
+          "coefficient": 0.0449,
+          "effect": 0.0332,
+          "qValue": 0.00024935063457607866,
+          "direction": "Lower \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 34,
+          "feature": "wavelet-hlh_gldm_dependencenonuniformitynormalized",
+          "display": "WAVELET HLH \u00b7 GLDM \u00b7 Dependence Non-Uniformitynormalized \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLH",
+          "family": "GLDM",
+          "measure": "Dependence Non-Uniformitynormalized",
+          "frequency": 0.133,
+          "coefficient": 0.028,
+          "effect": 0.0332,
+          "qValue": 0.00024935063457607866,
+          "direction": "Higher \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 35,
+          "feature": "log-sigma-5-0-mm-3d_gldm_dependenceentropy",
+          "display": "LOG 5-0 MM \u00b7 GLDM \u00b7 Dependence Entropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 5-0 MM",
+          "family": "GLDM",
+          "measure": "Dependence Entropy",
+          "frequency": 0.133,
+          "coefficient": 0.0243,
+          "effect": 0.0327,
+          "qValue": 0.0002533776115380166,
+          "direction": "Lower \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 36,
+          "feature": "wavelet-hhl_gldm_dependencenonuniformitynormalized",
+          "display": "WAVELET HHL \u00b7 GLDM \u00b7 Dependence Non-Uniformitynormalized \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHL",
+          "family": "GLDM",
+          "measure": "Dependence Non-Uniformitynormalized",
+          "frequency": 0.067,
+          "coefficient": 0.1418,
+          "effect": 0.024,
+          "qValue": 0.0020100740382363357,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 37,
+          "feature": "log-sigma-1-0-mm-3d_glszm_sizezonenonuniformity",
+          "display": "LOG 1-0 MM \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 1-0 MM",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.067,
+          "coefficient": 0.1247,
+          "effect": 0.0414,
+          "qValue": 0.00012009902160844246,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 38,
+          "feature": "wavelet-llh_glrlm_graylevelnonuniformitynormalized",
+          "display": "WAVELET LLH \u00b7 GLRLM \u00b7 Gray-Levelnon-Uniformitynormalized \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLRLM",
+          "measure": "Gray-Levelnon-Uniformitynormalized",
+          "frequency": 0.067,
+          "coefficient": 0.1156,
+          "effect": 0.0368,
+          "qValue": 0.0002334425244338978,
+          "direction": "Higher \u2192 Basal",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 39,
+          "feature": "wavelet-hhh_glszm_sizezonenonuniformity",
+          "display": "WAVELET HHH \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHH",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.067,
+          "coefficient": 0.0957,
+          "effect": 0.039,
+          "qValue": 0.00018105526613853255,
+          "direction": "Lower \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 40,
+          "feature": "log-sigma-3-0-mm-3d_glszm_graylevelnonuniformity",
+          "display": "LOG 3-0 MM \u00b7 GLSZM \u00b7 Gray-Levelnon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelnon-Uniformity",
+          "frequency": 0.067,
+          "coefficient": 0.0911,
+          "effect": 0.0393,
+          "qValue": 0.00017436630388445145,
+          "direction": "Higher \u2192 Basal",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 41,
+          "feature": "original_glszm_zoneentropy",
+          "display": "Original \u00b7 GLSZM \u00b7 Zoneentropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "Original",
+          "family": "GLSZM",
+          "measure": "Zoneentropy",
+          "frequency": 0.067,
+          "coefficient": 0.0887,
+          "effect": 0.0292,
+          "qValue": 0.0005059249448706956,
+          "direction": "Higher \u2192 Basal",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 42,
+          "feature": "wavelet-hhl_glszm_smallareaemphasis",
+          "display": "WAVELET HHL \u00b7 GLSZM \u00b7 Smallareaemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHL",
+          "family": "GLSZM",
+          "measure": "Smallareaemphasis",
+          "frequency": 0.067,
+          "coefficient": 0.0843,
+          "effect": 0.0298,
+          "qValue": 0.0004414206930624575,
+          "direction": "Higher \u2192 Luminal B",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 43,
+          "feature": "wavelet-llh_firstorder_uniformity",
+          "display": "WAVELET LLH \u00b7 First order \u00b7 Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "First order",
+          "measure": "Uniformity",
+          "frequency": 0.067,
+          "coefficient": 0.0772,
+          "effect": 0.0308,
+          "qValue": 0.0003486579301886107,
+          "direction": "Higher \u2192 Basal",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 44,
+          "feature": "wavelet-llh_gldm_largedependencelowgraylevelemphasis",
+          "display": "WAVELET LLH \u00b7 GLDM \u00b7 Largedependence Lowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLDM",
+          "measure": "Largedependence Lowgray-Levelemphasis",
+          "frequency": 0.067,
+          "coefficient": 0.0733,
+          "effect": 0.024,
+          "qValue": 0.0019808387662459737,
+          "direction": "Higher \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 45,
+          "feature": "wavelet-llh_firstorder_entropy",
+          "display": "WAVELET LLH \u00b7 First order \u00b7 Entropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "First order",
+          "measure": "Entropy",
+          "frequency": 0.067,
+          "coefficient": 0.0651,
+          "effect": 0.038,
+          "qValue": 0.00018696183115604143,
+          "direction": "Lower \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": true
+        },
+        {
+          "rank": 46,
+          "feature": "wavelet-lhl_firstorder_kurtosis",
+          "display": "WAVELET LHL \u00b7 First order \u00b7 Kurtosis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHL",
+          "family": "First order",
+          "measure": "Kurtosis",
+          "frequency": 0.067,
+          "coefficient": 0.0512,
+          "effect": 0.018,
+          "qValue": 0.01250215414704564,
+          "direction": "Higher \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 47,
+          "feature": "wavelet-lhl_gldm_largedependencelowgraylevelemphasis",
+          "display": "WAVELET LHL \u00b7 GLDM \u00b7 Largedependence Lowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHL",
+          "family": "GLDM",
+          "measure": "Largedependence Lowgray-Levelemphasis",
+          "frequency": 0.067,
+          "coefficient": 0.0492,
+          "effect": 0.0189,
+          "qValue": 0.009194639464385266,
+          "direction": "Higher \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 48,
+          "feature": "log-sigma-3-0-mm-3d_glrlm_longrunhighgraylevelemphasis",
+          "display": "LOG 3-0 MM \u00b7 GLRLM \u00b7 Longrunhighgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLRLM",
+          "measure": "Longrunhighgray-Levelemphasis",
+          "frequency": 0.067,
+          "coefficient": 0.0474,
+          "effect": 0.0163,
+          "qValue": 0.0210615004981585,
+          "direction": "Lower \u2192 Basal",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 49,
+          "feature": "wavelet-llh_glszm_smallarealowgraylevelemphasis",
+          "display": "WAVELET LLH \u00b7 GLSZM \u00b7 Smallarealowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLSZM",
+          "measure": "Smallarealowgray-Levelemphasis",
+          "frequency": 0.067,
+          "coefficient": 0.0457,
+          "effect": 0.0294,
+          "qValue": 0.00047817062908936034,
+          "direction": "Higher \u2192 Luminal A",
+          "fdrSignificant": true,
+          "finalModel": false
+        },
+        {
+          "rank": 50,
+          "feature": "log-sigma-3-0-mm-3d_glrlm_runpercentage",
+          "display": "LOG 3-0 MM \u00b7 GLRLM \u00b7 Runpercentage \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLRLM",
+          "measure": "Runpercentage",
+          "frequency": 0.067,
+          "coefficient": 0.0454,
+          "effect": 0.0342,
+          "qValue": 0.00024390740497424977,
+          "direction": "Higher \u2192 HER2-enriched",
+          "fdrSignificant": true,
+          "finalModel": false
+        }
+      ],
+      "featureGroups": {
+        "regions": [
+          {
+            "label": "Tumor",
+            "count": 20
+          }
+        ],
+        "families": [
+          {
+            "label": "GLSZM",
+            "count": 13
+          },
+          {
+            "label": "GLCM",
+            "count": 4
+          },
+          {
+            "label": "GLDM",
+            "count": 2
+          },
+          {
+            "label": "First order",
+            "count": 1
+          }
+        ],
+        "transforms": [
+          {
+            "label": "LOG 3-0 MM",
+            "count": 4
+          },
+          {
+            "label": "LOG 5-0 MM",
+            "count": 3
+          },
+          {
+            "label": "WAVELET HLH",
+            "count": 3
+          },
+          {
+            "label": "WAVELET LLL",
+            "count": 2
+          },
+          {
+            "label": "WAVELET LLH",
+            "count": 2
+          },
+          {
+            "label": "WAVELET LHH",
+            "count": 2
+          },
+          {
+            "label": "LOG 1-0 MM",
+            "count": 1
+          },
+          {
+            "label": "WAVELET HLL",
+            "count": 1
+          },
+          {
+            "label": "WAVELET HHL",
+            "count": 1
+          },
+          {
+            "label": "WAVELET LHL",
+            "count": 1
+          }
+        ]
+      },
+      "validation": {
+        "outerDesign": "5-fold \u00d7 3 repeats",
+        "outerFits": 15,
+        "innerDesign": "3-fold grid search",
+        "bootstrap": 1000,
+        "bestKMode": 25,
+        "bestCMode": 0.3,
+        "medianActiveFeatures": 11,
+        "finalK": 50,
+        "finalC": 0.1,
+        "finalActiveFeatures": 16
+      },
+      "title": "Molecular subtype",
+      "shortTitle": "Subtype",
+      "description": "Four-class prediction from radiomics only; receptor fields are excluded because they help define the label.",
+      "targetDefinition": "BRCA_Basal, BRCA_Her2, BRCA_LumA, or BRCA_LumB from the Duke molecular-subtype field.",
+      "excludedCount": 0,
+      "prevalenceNote": "Luminal A is the dominant class, so macro metrics and balanced accuracy are emphasized.",
+      "method": [
+        {
+          "step": "01",
+          "title": "Cohort & label audit",
+          "detail": "One row per patient; exact ID join; endpoint-specific missing labels excluded."
+        },
+        {
+          "step": "02",
+          "title": "Radiomics-only matrix",
+          "detail": "2,064 tumor and peritumoral-vessel features; menopause and receptor fields explicitly removed."
+        },
+        {
+          "step": "03",
+          "title": "Training-fold screen",
+          "detail": "ANOVA F ranking (k = 25, 50, 100), then |Spearman \u03c1| \u2265 0.90 redundancy pruning."
+        },
+        {
+          "step": "04",
+          "title": "Sparse conventional model",
+          "detail": "Z-score scaling and class-weighted L1 logistic regression; C tuned in the inner loop."
+        },
+        {
+          "step": "05",
+          "title": "Nested validation",
+          "detail": "5-fold \u00d7 3 repeated outer CV, 3-fold inner tuning, pooled out-of-fold predictions, 1,000 bootstrap intervals."
+        },
+        {
+          "step": "06",
+          "title": "Stability ranking",
+          "detail": "Features ranked by outer-fold selection frequency, standardized coefficient magnitude, and univariate effect."
+        }
+      ]
+    },
+    "pcr": {
+      "key": "pcr",
+      "sampleCount": 238,
+      "classCount": 2,
+      "classes": [
+        {
+          "label": "No pCR",
+          "count": 187,
+          "percent": 78.6
+        },
+        {
+          "label": "pCR",
+          "count": 51,
+          "percent": 21.4
+        }
+      ],
+      "metrics": [
+        {
+          "key": "rocAuc",
+          "label": "ROC AUC",
+          "value": 0.428,
+          "low": 0.339,
+          "high": 0.52,
+          "higherBetter": true
+        },
+        {
+          "key": "prAuc",
+          "label": "PR AUC",
+          "value": 0.192,
+          "low": 0.165,
+          "high": 0.262,
+          "higherBetter": true
+        },
+        {
+          "key": "balancedAccuracy",
+          "label": "Balanced accuracy",
+          "value": 0.461,
+          "low": 0.393,
+          "high": 0.535,
+          "higherBetter": true
+        },
+        {
+          "key": "sensitivity",
+          "label": "Sensitivity",
+          "value": 0.275,
+          "low": 0.157,
+          "high": 0.412,
+          "higherBetter": true
+        },
+        {
+          "key": "specificity",
+          "label": "Specificity",
+          "value": 0.647,
+          "low": 0.572,
+          "high": 0.717,
+          "higherBetter": true
+        },
+        {
+          "key": "brier",
+          "label": "Brier score",
+          "value": 0.251,
+          "low": 0.234,
+          "high": 0.267,
+          "higherBetter": false
+        }
+      ],
+      "classAuc": [],
+      "rocCurves": [
+        {
+          "label": "pCR",
+          "auc": 0.428,
+          "points": [
+            {
+              "x": 0.0,
+              "y": 0.0
+            },
+            {
+              "x": 0.00535,
+              "y": 0.0
+            },
+            {
+              "x": 0.02139,
+              "y": 0.0
+            },
+            {
+              "x": 0.02139,
+              "y": 0.01961
+            },
+            {
+              "x": 0.07487,
+              "y": 0.01961
+            },
+            {
+              "x": 0.08021,
+              "y": 0.05882
+            },
+            {
+              "x": 0.08021,
+              "y": 0.07843
+            },
+            {
+              "x": 0.08556,
+              "y": 0.07843
+            },
+            {
+              "x": 0.08556,
+              "y": 0.09804
+            },
+            {
+              "x": 0.1123,
+              "y": 0.09804
+            },
+            {
+              "x": 0.1123,
+              "y": 0.11765
+            },
+            {
+              "x": 0.14973,
+              "y": 0.11765
+            },
+            {
+              "x": 0.14973,
+              "y": 0.13725
+            },
+            {
+              "x": 0.16578,
+              "y": 0.13725
+            },
+            {
+              "x": 0.2139,
+              "y": 0.15686
+            },
+            {
+              "x": 0.2139,
+              "y": 0.17647
+            },
+            {
+              "x": 0.24064,
+              "y": 0.17647
+            },
+            {
+              "x": 0.24064,
+              "y": 0.19608
+            },
+            {
+              "x": 0.28342,
+              "y": 0.19608
+            },
+            {
+              "x": 0.28342,
+              "y": 0.21569
+            },
+            {
+              "x": 0.29947,
+              "y": 0.21569
+            },
+            {
+              "x": 0.29947,
+              "y": 0.23529
+            },
+            {
+              "x": 0.32086,
+              "y": 0.2549
+            },
+            {
+              "x": 0.35294,
+              "y": 0.2549
+            },
+            {
+              "x": 0.35294,
+              "y": 0.27451
+            },
+            {
+              "x": 0.36364,
+              "y": 0.27451
+            },
+            {
+              "x": 0.37968,
+              "y": 0.27451
+            },
+            {
+              "x": 0.38503,
+              "y": 0.29412
+            },
+            {
+              "x": 0.39037,
+              "y": 0.29412
+            },
+            {
+              "x": 0.39037,
+              "y": 0.31373
+            },
+            {
+              "x": 0.41176,
+              "y": 0.31373
+            },
+            {
+              "x": 0.43316,
+              "y": 0.33333
+            },
+            {
+              "x": 0.43316,
+              "y": 0.35294
+            },
+            {
+              "x": 0.44385,
+              "y": 0.35294
+            },
+            {
+              "x": 0.49733,
+              "y": 0.35294
+            },
+            {
+              "x": 0.49733,
+              "y": 0.37255
+            },
+            {
+              "x": 0.51337,
+              "y": 0.37255
+            },
+            {
+              "x": 0.51337,
+              "y": 0.39216
+            },
+            {
+              "x": 0.53476,
+              "y": 0.39216
+            },
+            {
+              "x": 0.53476,
+              "y": 0.41176
+            },
+            {
+              "x": 0.59358,
+              "y": 0.43137
+            },
+            {
+              "x": 0.60428,
+              "y": 0.43137
+            },
+            {
+              "x": 0.60428,
+              "y": 0.45098
+            },
+            {
+              "x": 0.61497,
+              "y": 0.45098
+            },
+            {
+              "x": 0.61497,
+              "y": 0.47059
+            },
+            {
+              "x": 0.62032,
+              "y": 0.47059
+            },
+            {
+              "x": 0.62032,
+              "y": 0.4902
+            },
+            {
+              "x": 0.63636,
+              "y": 0.4902
+            },
+            {
+              "x": 0.63636,
+              "y": 0.5098
+            },
+            {
+              "x": 0.6631,
+              "y": 0.52941
+            },
+            {
+              "x": 0.68449,
+              "y": 0.52941
+            },
+            {
+              "x": 0.68449,
+              "y": 0.54902
+            },
+            {
+              "x": 0.72727,
+              "y": 0.54902
+            },
+            {
+              "x": 0.72727,
+              "y": 0.60784
+            },
+            {
+              "x": 0.73262,
+              "y": 0.60784
+            },
+            {
+              "x": 0.73262,
+              "y": 0.62745
+            },
+            {
+              "x": 0.73797,
+              "y": 0.62745
+            },
+            {
+              "x": 0.73797,
+              "y": 0.64706
+            },
+            {
+              "x": 0.74332,
+              "y": 0.66667
+            },
+            {
+              "x": 0.75401,
+              "y": 0.66667
+            },
+            {
+              "x": 0.75401,
+              "y": 0.68627
+            },
+            {
+              "x": 0.79679,
+              "y": 0.68627
+            },
+            {
+              "x": 0.79679,
+              "y": 0.72549
+            },
+            {
+              "x": 0.80214,
+              "y": 0.72549
+            },
+            {
+              "x": 0.80214,
+              "y": 0.76471
+            },
+            {
+              "x": 0.80749,
+              "y": 0.76471
+            },
+            {
+              "x": 0.83422,
+              "y": 0.80392
+            },
+            {
+              "x": 0.83422,
+              "y": 0.82353
+            },
+            {
+              "x": 0.8984,
+              "y": 0.82353
+            },
+            {
+              "x": 0.8984,
+              "y": 0.88235
+            },
+            {
+              "x": 0.90374,
+              "y": 0.88235
+            },
+            {
+              "x": 0.90374,
+              "y": 0.90196
+            },
+            {
+              "x": 0.91444,
+              "y": 0.90196
+            },
+            {
+              "x": 0.91444,
+              "y": 0.94118
+            },
+            {
+              "x": 0.91979,
+              "y": 0.94118
+            },
+            {
+              "x": 0.95722,
+              "y": 0.96078
+            },
+            {
+              "x": 0.95722,
+              "y": 0.98039
+            },
+            {
+              "x": 0.99465,
+              "y": 0.98039
+            },
+            {
+              "x": 0.99465,
+              "y": 1.0
+            },
+            {
+              "x": 1.0,
+              "y": 1.0
+            }
+          ]
+        }
+      ],
+      "prCurve": [
+        {
+          "x": 0.0,
+          "y": 1.0
+        },
+        {
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "x": 0.01961,
+          "y": 0.16667
+        },
+        {
+          "x": 0.01961,
+          "y": 0.11111
+        },
+        {
+          "x": 0.01961,
+          "y": 0.08333
+        },
+        {
+          "x": 0.01961,
+          "y": 0.06667
+        },
+        {
+          "x": 0.05882,
+          "y": 0.16667
+        },
+        {
+          "x": 0.09804,
+          "y": 0.2381
+        },
+        {
+          "x": 0.09804,
+          "y": 0.21739
+        },
+        {
+          "x": 0.09804,
+          "y": 0.19231
+        },
+        {
+          "x": 0.11765,
+          "y": 0.2069
+        },
+        {
+          "x": 0.11765,
+          "y": 0.1875
+        },
+        {
+          "x": 0.13725,
+          "y": 0.2
+        },
+        {
+          "x": 0.13725,
+          "y": 0.18421
+        },
+        {
+          "x": 0.15686,
+          "y": 0.19512
+        },
+        {
+          "x": 0.15686,
+          "y": 0.18182
+        },
+        {
+          "x": 0.15686,
+          "y": 0.17021
+        },
+        {
+          "x": 0.17647,
+          "y": 0.18
+        },
+        {
+          "x": 0.17647,
+          "y": 0.16981
+        },
+        {
+          "x": 0.19608,
+          "y": 0.17857
+        },
+        {
+          "x": 0.19608,
+          "y": 0.16949
+        },
+        {
+          "x": 0.19608,
+          "y": 0.16129
+        },
+        {
+          "x": 0.21569,
+          "y": 0.16923
+        },
+        {
+          "x": 0.23529,
+          "y": 0.17647
+        },
+        {
+          "x": 0.23529,
+          "y": 0.17143
+        },
+        {
+          "x": 0.2549,
+          "y": 0.17808
+        },
+        {
+          "x": 0.2549,
+          "y": 0.17105
+        },
+        {
+          "x": 0.2549,
+          "y": 0.16456
+        },
+        {
+          "x": 0.27451,
+          "y": 0.16867
+        },
+        {
+          "x": 0.29412,
+          "y": 0.17241
+        },
+        {
+          "x": 0.31373,
+          "y": 0.17778
+        },
+        {
+          "x": 0.31373,
+          "y": 0.17204
+        },
+        {
+          "x": 0.35294,
+          "y": 0.18182
+        },
+        {
+          "x": 0.35294,
+          "y": 0.17476
+        },
+        {
+          "x": 0.35294,
+          "y": 0.16981
+        },
+        {
+          "x": 0.35294,
+          "y": 0.16514
+        },
+        {
+          "x": 0.37255,
+          "y": 0.16964
+        },
+        {
+          "x": 0.37255,
+          "y": 0.16522
+        },
+        {
+          "x": 0.39216,
+          "y": 0.16949
+        },
+        {
+          "x": 0.41176,
+          "y": 0.17355
+        },
+        {
+          "x": 0.41176,
+          "y": 0.17073
+        },
+        {
+          "x": 0.41176,
+          "y": 0.16667
+        },
+        {
+          "x": 0.41176,
+          "y": 0.16279
+        },
+        {
+          "x": 0.41176,
+          "y": 0.15909
+        },
+        {
+          "x": 0.43137,
+          "y": 0.16296
+        },
+        {
+          "x": 0.45098,
+          "y": 0.16667
+        },
+        {
+          "x": 0.4902,
+          "y": 0.1773
+        },
+        {
+          "x": 0.4902,
+          "y": 0.17361
+        },
+        {
+          "x": 0.5098,
+          "y": 0.17687
+        },
+        {
+          "x": 0.5098,
+          "y": 0.17333
+        },
+        {
+          "x": 0.52941,
+          "y": 0.17647
+        },
+        {
+          "x": 0.54902,
+          "y": 0.17949
+        },
+        {
+          "x": 0.54902,
+          "y": 0.1761
+        },
+        {
+          "x": 0.54902,
+          "y": 0.17284
+        },
+        {
+          "x": 0.56863,
+          "y": 0.17576
+        },
+        {
+          "x": 0.60784,
+          "y": 0.18452
+        },
+        {
+          "x": 0.62745,
+          "y": 0.18824
+        },
+        {
+          "x": 0.66667,
+          "y": 0.19653
+        },
+        {
+          "x": 0.68627,
+          "y": 0.19886
+        },
+        {
+          "x": 0.68627,
+          "y": 0.19553
+        },
+        {
+          "x": 0.68627,
+          "y": 0.19231
+        },
+        {
+          "x": 0.70588,
+          "y": 0.19459
+        },
+        {
+          "x": 0.7451,
+          "y": 0.20213
+        },
+        {
+          "x": 0.78431,
+          "y": 0.20942
+        },
+        {
+          "x": 0.80392,
+          "y": 0.21134
+        },
+        {
+          "x": 0.80392,
+          "y": 0.20812
+        },
+        {
+          "x": 0.82353,
+          "y": 0.21
+        },
+        {
+          "x": 0.82353,
+          "y": 0.2069
+        },
+        {
+          "x": 0.82353,
+          "y": 0.20388
+        },
+        {
+          "x": 0.82353,
+          "y": 0.20096
+        },
+        {
+          "x": 0.86275,
+          "y": 0.20755
+        },
+        {
+          "x": 0.90196,
+          "y": 0.21395
+        },
+        {
+          "x": 0.90196,
+          "y": 0.21198
+        },
+        {
+          "x": 0.94118,
+          "y": 0.21818
+        },
+        {
+          "x": 0.96078,
+          "y": 0.21973
+        },
+        {
+          "x": 0.96078,
+          "y": 0.21681
+        },
+        {
+          "x": 0.98039,
+          "y": 0.21834
+        },
+        {
+          "x": 0.98039,
+          "y": 0.21552
+        },
+        {
+          "x": 0.98039,
+          "y": 0.21277
+        },
+        {
+          "x": 1.0,
+          "y": 0.21429
+        }
+      ],
+      "calibration": [
+        {
+          "x": 0.23627,
+          "y": 0.3
+        },
+        {
+          "x": 0.34519,
+          "y": 0.23333
+        },
+        {
+          "x": 0.39221,
+          "y": 0.31034
+        },
+        {
+          "x": 0.43613,
+          "y": 0.2
+        },
+        {
+          "x": 0.47305,
+          "y": 0.13333
+        },
+        {
+          "x": 0.51542,
+          "y": 0.2069
+        },
+        {
+          "x": 0.57067,
+          "y": 0.13333
+        },
+        {
+          "x": 0.6598,
+          "y": 0.2
+        }
+      ],
+      "confusion": {
+        "labels": [
+          "No pCR",
+          "pCR"
+        ],
+        "counts": [
+          [
+            121,
+            66
+          ],
+          [
+            37,
+            14
+          ]
+        ],
+        "normalized": [
+          [
+            0.647,
+            0.353
+          ],
+          [
+            0.725,
+            0.275
+          ]
+        ]
+      },
+      "featureFunnel": [
+        {
+          "label": "Radiomic input",
+          "count": 2064,
+          "note": "Tumor + vessel regions"
+        },
+        {
+          "label": "QC retained",
+          "count": 2064,
+          "note": "No missing, infinite, or constant features"
+        },
+        {
+          "label": "Univariate FDR",
+          "count": 0,
+          "note": "Benjamini\u2013Hochberg q < 0.05"
+        },
+        {
+          "label": "Nonredundant FDR",
+          "count": 0,
+          "note": "|Spearman \u03c1| < 0.90 representatives"
+        },
+        {
+          "label": "Stable L1",
+          "count": 2,
+          "note": "Selected in \u226550% of outer folds"
+        }
+      ],
+      "features": [
+        {
+          "rank": 1,
+          "feature": "wavelet-llh_gldm_dependenceentropy",
+          "display": "WAVELET LLH \u00b7 GLDM \u00b7 Dependence Entropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLDM",
+          "measure": "Dependence Entropy",
+          "frequency": 0.533,
+          "coefficient": 0.7463,
+          "effect": -0.4149,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 2,
+          "feature": "wavelet-hlh_gldm_dependenceentropy",
+          "display": "WAVELET HLH \u00b7 GLDM \u00b7 Dependence Entropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLH",
+          "family": "GLDM",
+          "measure": "Dependence Entropy",
+          "frequency": 0.533,
+          "coefficient": 0.3165,
+          "effect": -0.4392,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 3,
+          "feature": "wavelet-lhl_glszm_sizezonenonuniformity_vessel",
+          "display": "WAVELET LHL \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET LHL",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.467,
+          "coefficient": 0.2832,
+          "effect": -0.3453,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 4,
+          "feature": "wavelet-llh_firstorder_kurtosis",
+          "display": "WAVELET LLH \u00b7 First order \u00b7 Kurtosis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "First order",
+          "measure": "Kurtosis",
+          "frequency": 0.4,
+          "coefficient": 0.5057,
+          "effect": 0.3265,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 5,
+          "feature": "wavelet-llh_glrlm_longrunlowgraylevelemphasis",
+          "display": "WAVELET LLH \u00b7 GLRLM \u00b7 Longrunlowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLRLM",
+          "measure": "Longrunlowgray-Levelemphasis",
+          "frequency": 0.333,
+          "coefficient": 0.5196,
+          "effect": 0.4228,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 6,
+          "feature": "log-sigma-3-0-mm-3d_glcm_inversevariance_vessel",
+          "display": "LOG 3-0 MM \u00b7 GLCM \u00b7 Inversevariance \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "LOG 3-0 MM",
+          "family": "GLCM",
+          "measure": "Inversevariance",
+          "frequency": 0.333,
+          "coefficient": 0.4411,
+          "effect": 0.3307,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 7,
+          "feature": "wavelet-hhl_firstorder_skewness",
+          "display": "WAVELET HHL \u00b7 First order \u00b7 Skewness \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHL",
+          "family": "First order",
+          "measure": "Skewness",
+          "frequency": 0.267,
+          "coefficient": 0.2837,
+          "effect": 0.2888,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 8,
+          "feature": "wavelet-llh_gldm_lowgraylevelemphasis",
+          "display": "WAVELET LLH \u00b7 GLDM \u00b7 Lowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLDM",
+          "measure": "Lowgray-Levelemphasis",
+          "frequency": 0.267,
+          "coefficient": 0.1844,
+          "effect": 0.2773,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 9,
+          "feature": "log-sigma-1-0-mm-3d_firstorder_kurtosis_vessel",
+          "display": "LOG 1-0 MM \u00b7 First order \u00b7 Kurtosis \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "LOG 1-0 MM",
+          "family": "First order",
+          "measure": "Kurtosis",
+          "frequency": 0.267,
+          "coefficient": 0.1016,
+          "effect": 0.3563,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 10,
+          "feature": "wavelet-llh_glcm_correlation_vessel",
+          "display": "WAVELET LLH \u00b7 GLCM \u00b7 Correlation \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET LLH",
+          "family": "GLCM",
+          "measure": "Correlation",
+          "frequency": 0.2,
+          "coefficient": 0.4142,
+          "effect": 0.2758,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 11,
+          "feature": "wavelet-llh_glszm_sizezonenonuniformity",
+          "display": "WAVELET LLH \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.2,
+          "coefficient": 0.3558,
+          "effect": -0.2837,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 12,
+          "feature": "log-sigma-3-0-mm-3d_glcm_clustershade",
+          "display": "LOG 3-0 MM \u00b7 GLCM \u00b7 Clustershade \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLCM",
+          "measure": "Clustershade",
+          "frequency": 0.2,
+          "coefficient": 0.3269,
+          "effect": -0.248,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 13,
+          "feature": "wavelet-hlh_glcm_clustershade",
+          "display": "WAVELET HLH \u00b7 GLCM \u00b7 Clustershade \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLH",
+          "family": "GLCM",
+          "measure": "Clustershade",
+          "frequency": 0.2,
+          "coefficient": 0.2836,
+          "effect": -0.268,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 14,
+          "feature": "log-sigma-3-0-mm-3d_glszm_zoneentropy_vessel",
+          "display": "LOG 3-0 MM \u00b7 GLSZM \u00b7 Zoneentropy \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "LOG 3-0 MM",
+          "family": "GLSZM",
+          "measure": "Zoneentropy",
+          "frequency": 0.2,
+          "coefficient": 0.2758,
+          "effect": 0.2519,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 15,
+          "feature": "log-sigma-5-0-mm-3d_glszm_zoneentropy_vessel",
+          "display": "LOG 5-0 MM \u00b7 GLSZM \u00b7 Zoneentropy \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "LOG 5-0 MM",
+          "family": "GLSZM",
+          "measure": "Zoneentropy",
+          "frequency": 0.2,
+          "coefficient": 0.2747,
+          "effect": 0.2813,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 16,
+          "feature": "log-sigma-5-0-mm-3d_glszm_graylevelvariance_vessel",
+          "display": "LOG 5-0 MM \u00b7 GLSZM \u00b7 Gray-Levelvariance \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "LOG 5-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelvariance",
+          "frequency": 0.2,
+          "coefficient": 0.249,
+          "effect": 0.2464,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 17,
+          "feature": "wavelet-llh_gldm_largedependencelowgraylevelemphasis",
+          "display": "WAVELET LLH \u00b7 GLDM \u00b7 Largedependence Lowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLDM",
+          "measure": "Largedependence Lowgray-Levelemphasis",
+          "frequency": 0.2,
+          "coefficient": 0.222,
+          "effect": 0.3931,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 18,
+          "feature": "log-sigma-1-0-mm-3d_gldm_dependenceentropy",
+          "display": "LOG 1-0 MM \u00b7 GLDM \u00b7 Dependence Entropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 1-0 MM",
+          "family": "GLDM",
+          "measure": "Dependence Entropy",
+          "frequency": 0.2,
+          "coefficient": 0.2136,
+          "effect": -0.2836,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 19,
+          "feature": "wavelet-lhh_glszm_sizezonenonuniformity_vessel",
+          "display": "WAVELET LHH \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET LHH",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.2,
+          "coefficient": 0.2071,
+          "effect": -0.301,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 20,
+          "feature": "wavelet-llh_glcm_imc2_vessel",
+          "display": "WAVELET LLH \u00b7 GLCM \u00b7 Imc2 \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET LLH",
+          "family": "GLCM",
+          "measure": "Imc2",
+          "frequency": 0.2,
+          "coefficient": 0.1689,
+          "effect": 0.2471,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 21,
+          "feature": "wavelet-hlh_firstorder_kurtosis",
+          "display": "WAVELET HLH \u00b7 First order \u00b7 Kurtosis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLH",
+          "family": "First order",
+          "measure": "Kurtosis",
+          "frequency": 0.2,
+          "coefficient": 0.1143,
+          "effect": 0.3135,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 22,
+          "feature": "wavelet-llh_glrlm_shortrunhighgraylevelemphasis",
+          "display": "WAVELET LLH \u00b7 GLRLM \u00b7 Shortrunhighgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLRLM",
+          "measure": "Shortrunhighgray-Levelemphasis",
+          "frequency": 0.133,
+          "coefficient": 0.7986,
+          "effect": -0.3072,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 23,
+          "feature": "wavelet-llh_glrlm_graylevelnonuniformitynormalized",
+          "display": "WAVELET LLH \u00b7 GLRLM \u00b7 Gray-Levelnon-Uniformitynormalized \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLRLM",
+          "measure": "Gray-Levelnon-Uniformitynormalized",
+          "frequency": 0.133,
+          "coefficient": 0.721,
+          "effect": 0.2848,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 24,
+          "feature": "wavelet-hhl_glcm_jointaverage",
+          "display": "WAVELET HHL \u00b7 GLCM \u00b7 Joint Average \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHL",
+          "family": "GLCM",
+          "measure": "Joint Average",
+          "frequency": 0.133,
+          "coefficient": 0.4534,
+          "effect": -0.2664,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 25,
+          "feature": "wavelet-hhl_glcm_clustertendency_vessel",
+          "display": "WAVELET HHL \u00b7 GLCM \u00b7 Clustertendency \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET HHL",
+          "family": "GLCM",
+          "measure": "Clustertendency",
+          "frequency": 0.133,
+          "coefficient": 0.4324,
+          "effect": -0.2548,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 26,
+          "feature": "wavelet-llh_glcm_jointenergy",
+          "display": "WAVELET LLH \u00b7 GLCM \u00b7 Joint Energy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLCM",
+          "measure": "Joint Energy",
+          "frequency": 0.133,
+          "coefficient": 0.3853,
+          "effect": 0.2801,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 27,
+          "feature": "log-sigma-3-0-mm-3d_gldm_smalldependencelowgraylevelemphasis_vessel",
+          "display": "LOG 3-0 MM \u00b7 GLDM \u00b7 Smalldependence Lowgray-Levelemphasis \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "LOG 3-0 MM",
+          "family": "GLDM",
+          "measure": "Smalldependence Lowgray-Levelemphasis",
+          "frequency": 0.133,
+          "coefficient": 0.3239,
+          "effect": -0.2335,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 28,
+          "feature": "wavelet-hlh_glszm_zoneentropy",
+          "display": "WAVELET HLH \u00b7 GLSZM \u00b7 Zoneentropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLH",
+          "family": "GLSZM",
+          "measure": "Zoneentropy",
+          "frequency": 0.133,
+          "coefficient": 0.2818,
+          "effect": -0.3059,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 29,
+          "feature": "wavelet-llh_glszm_smallareahighgraylevelemphasis",
+          "display": "WAVELET LLH \u00b7 GLSZM \u00b7 Smallareahighgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLH",
+          "family": "GLSZM",
+          "measure": "Smallareahighgray-Levelemphasis",
+          "frequency": 0.133,
+          "coefficient": 0.2636,
+          "effect": -0.2992,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 30,
+          "feature": "wavelet-hll_firstorder_kurtosis_vessel",
+          "display": "WAVELET HLL \u00b7 First order \u00b7 Kurtosis \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET HLL",
+          "family": "First order",
+          "measure": "Kurtosis",
+          "frequency": 0.133,
+          "coefficient": 0.2373,
+          "effect": 0.2343,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 31,
+          "feature": "wavelet-lhh_glszm_zoneentropy",
+          "display": "WAVELET LHH \u00b7 GLSZM \u00b7 Zoneentropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "GLSZM",
+          "measure": "Zoneentropy",
+          "frequency": 0.133,
+          "coefficient": 0.2314,
+          "effect": -0.2907,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 32,
+          "feature": "wavelet-hhh_glcm_clustershade",
+          "display": "WAVELET HHH \u00b7 GLCM \u00b7 Clustershade \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHH",
+          "family": "GLCM",
+          "measure": "Clustershade",
+          "frequency": 0.133,
+          "coefficient": 0.2081,
+          "effect": -0.2413,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 33,
+          "feature": "wavelet-hll_firstorder_skewness_vessel",
+          "display": "WAVELET HLL \u00b7 First order \u00b7 Skewness \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET HLL",
+          "family": "First order",
+          "measure": "Skewness",
+          "frequency": 0.133,
+          "coefficient": 0.2068,
+          "effect": -0.2682,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 34,
+          "feature": "wavelet-lhh_gldm_dependenceentropy",
+          "display": "WAVELET LHH \u00b7 GLDM \u00b7 Dependence Entropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "GLDM",
+          "measure": "Dependence Entropy",
+          "frequency": 0.133,
+          "coefficient": 0.1987,
+          "effect": -0.2558,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 35,
+          "feature": "log-sigma-5-0-mm-3d_glcm_clustershade_vessel",
+          "display": "LOG 5-0 MM \u00b7 GLCM \u00b7 Clustershade \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "LOG 5-0 MM",
+          "family": "GLCM",
+          "measure": "Clustershade",
+          "frequency": 0.133,
+          "coefficient": 0.1984,
+          "effect": -0.2785,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 36,
+          "feature": "log-sigma-5-0-mm-3d_glcm_correlation_vessel",
+          "display": "LOG 5-0 MM \u00b7 GLCM \u00b7 Correlation \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "LOG 5-0 MM",
+          "family": "GLCM",
+          "measure": "Correlation",
+          "frequency": 0.133,
+          "coefficient": 0.1582,
+          "effect": 0.2589,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 37,
+          "feature": "wavelet-lhh_gldm_lowgraylevelemphasis",
+          "display": "WAVELET LHH \u00b7 GLDM \u00b7 Lowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHH",
+          "family": "GLDM",
+          "measure": "Lowgray-Levelemphasis",
+          "frequency": 0.133,
+          "coefficient": 0.1269,
+          "effect": 0.2473,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 38,
+          "feature": "wavelet-llh_glszm_sizezonenonuniformity_vessel",
+          "display": "WAVELET LLH \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET LLH",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.133,
+          "coefficient": 0.1115,
+          "effect": -0.2362,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 39,
+          "feature": "wavelet-hhl_firstorder_kurtosis_vessel",
+          "display": "WAVELET HHL \u00b7 First order \u00b7 Kurtosis \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET HHL",
+          "family": "First order",
+          "measure": "Kurtosis",
+          "frequency": 0.133,
+          "coefficient": 0.0979,
+          "effect": 0.2711,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 40,
+          "feature": "wavelet-hlh_glszm_graylevelnonuniformitynormalized",
+          "display": "WAVELET HLH \u00b7 GLSZM \u00b7 Gray-Levelnon-Uniformitynormalized \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HLH",
+          "family": "GLSZM",
+          "measure": "Gray-Levelnon-Uniformitynormalized",
+          "frequency": 0.133,
+          "coefficient": 0.0975,
+          "effect": 0.3014,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 41,
+          "feature": "wavelet-hhl_glrlm_longrunlowgraylevelemphasis",
+          "display": "WAVELET HHL \u00b7 GLRLM \u00b7 Longrunlowgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET HHL",
+          "family": "GLRLM",
+          "measure": "Longrunlowgray-Levelemphasis",
+          "frequency": 0.133,
+          "coefficient": 0.0964,
+          "effect": 0.2179,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 42,
+          "feature": "wavelet-lll_glcm_jointenergy_vessel",
+          "display": "WAVELET LLL \u00b7 GLCM \u00b7 Joint Energy \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET LLL",
+          "family": "GLCM",
+          "measure": "Joint Energy",
+          "frequency": 0.133,
+          "coefficient": 0.0537,
+          "effect": 0.3012,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 43,
+          "feature": "log-sigma-3-0-mm-3d_glcm_clustershade_vessel",
+          "display": "LOG 3-0 MM \u00b7 GLCM \u00b7 Clustershade \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "LOG 3-0 MM",
+          "family": "GLCM",
+          "measure": "Clustershade",
+          "frequency": 0.133,
+          "coefficient": 0.0432,
+          "effect": -0.2406,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 44,
+          "feature": "wavelet-lll_glszm_zoneentropy",
+          "display": "WAVELET LLL \u00b7 GLSZM \u00b7 Zoneentropy \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LLL",
+          "family": "GLSZM",
+          "measure": "Zoneentropy",
+          "frequency": 0.067,
+          "coefficient": 0.9534,
+          "effect": 0.1812,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 45,
+          "feature": "log-sigma-5-0-mm-3d_glszm_graylevelnonuniformitynormalized_vessel",
+          "display": "LOG 5-0 MM \u00b7 GLSZM \u00b7 Gray-Levelnon-Uniformitynormalized \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "LOG 5-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelnon-Uniformitynormalized",
+          "frequency": 0.067,
+          "coefficient": 0.8966,
+          "effect": -0.2133,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 46,
+          "feature": "wavelet-hhl_glcm_imc1_vessel",
+          "display": "WAVELET HHL \u00b7 GLCM \u00b7 Imc1 \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET HHL",
+          "family": "GLCM",
+          "measure": "Imc1",
+          "frequency": 0.067,
+          "coefficient": 0.6685,
+          "effect": -0.2453,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 47,
+          "feature": "wavelet-lhl_glszm_smallareahighgraylevelemphasis",
+          "display": "WAVELET LHL \u00b7 GLSZM \u00b7 Smallareahighgray-Levelemphasis \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "WAVELET LHL",
+          "family": "GLSZM",
+          "measure": "Smallareahighgray-Levelemphasis",
+          "frequency": 0.067,
+          "coefficient": 0.5942,
+          "effect": 0.2232,
+          "qValue": 0.927935778700103,
+          "direction": "Higher in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 48,
+          "feature": "log-sigma-3-0-mm-3d_glszm_graylevelnonuniformitynormalized",
+          "display": "LOG 3-0 MM \u00b7 GLSZM \u00b7 Gray-Levelnon-Uniformitynormalized \u00b7 Tumor",
+          "region": "Tumor",
+          "transform": "LOG 3-0 MM",
+          "family": "GLSZM",
+          "measure": "Gray-Levelnon-Uniformitynormalized",
+          "frequency": 0.067,
+          "coefficient": 0.5855,
+          "effect": -0.1547,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 49,
+          "feature": "wavelet-lhl_firstorder_90percentile_vessel",
+          "display": "WAVELET LHL \u00b7 First order \u00b7 90Percentile \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET LHL",
+          "family": "First order",
+          "measure": "90Percentile",
+          "frequency": 0.067,
+          "coefficient": 0.566,
+          "effect": -0.1754,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        },
+        {
+          "rank": 50,
+          "feature": "wavelet-hll_glszm_sizezonenonuniformity_vessel",
+          "display": "WAVELET HLL \u00b7 GLSZM \u00b7 Sizezonenon-Uniformity \u00b7 Vessel",
+          "region": "Vessel",
+          "transform": "WAVELET HLL",
+          "family": "GLSZM",
+          "measure": "Sizezonenon-Uniformity",
+          "frequency": 0.067,
+          "coefficient": 0.4945,
+          "effect": -0.2705,
+          "qValue": 0.927935778700103,
+          "direction": "Lower in pCR",
+          "fdrSignificant": false,
+          "finalModel": false
+        }
+      ],
+      "featureGroups": {
+        "regions": [
+          {
+            "label": "Tumor",
+            "count": 11
+          },
+          {
+            "label": "Vessel",
+            "count": 9
+          }
+        ],
+        "families": [
+          {
+            "label": "GLSZM",
+            "count": 6
+          },
+          {
+            "label": "GLDM",
+            "count": 5
+          },
+          {
+            "label": "GLCM",
+            "count": 5
+          },
+          {
+            "label": "First order",
+            "count": 3
+          },
+          {
+            "label": "GLRLM",
+            "count": 1
+          }
+        ],
+        "transforms": [
+          {
+            "label": "WAVELET LLH",
+            "count": 8
+          },
+          {
+            "label": "LOG 3-0 MM",
+            "count": 3
+          },
+          {
+            "label": "WAVELET HLH",
+            "count": 2
+          },
+          {
+            "label": "LOG 1-0 MM",
+            "count": 2
+          },
+          {
+            "label": "LOG 5-0 MM",
+            "count": 2
+          },
+          {
+            "label": "WAVELET LHL",
+            "count": 1
+          },
+          {
+            "label": "WAVELET HHL",
+            "count": 1
+          },
+          {
+            "label": "WAVELET LHH",
+            "count": 1
+          }
+        ]
+      },
+      "validation": {
+        "outerDesign": "5-fold \u00d7 3 repeats",
+        "outerFits": 15,
+        "innerDesign": "3-fold grid search",
+        "bootstrap": 1000,
+        "bestKMode": 25,
+        "bestCMode": 1.0,
+        "medianActiveFeatures": 11,
+        "finalK": 25,
+        "finalC": 0.03,
+        "finalActiveFeatures": 0
+      },
+      "title": "Pathologic complete response",
+      "shortTitle": "pCR",
+      "description": "Binary radiomics-only prediction among patients with evaluable strict response labels.",
+      "targetDefinition": "\u2018Complete\u2019 in Overall Near-complete Response: Stricter Definition = pCR; near-complete and not-complete-or-near-complete = no pCR; missing/not-available excluded.",
+      "excludedCount": 534,
+      "prevalenceNote": "The positive class is uncommon; PR AUC and sensitivity are shown alongside ROC AUC.",
+      "method": [
+        {
+          "step": "01",
+          "title": "Cohort & label audit",
+          "detail": "One row per patient; exact ID join; endpoint-specific missing labels excluded."
+        },
+        {
+          "step": "02",
+          "title": "Radiomics-only matrix",
+          "detail": "2,064 tumor and peritumoral-vessel features; menopause and receptor fields explicitly removed."
+        },
+        {
+          "step": "03",
+          "title": "Training-fold screen",
+          "detail": "ANOVA F ranking (k = 25, 50, 100), then |Spearman \u03c1| \u2265 0.90 redundancy pruning."
+        },
+        {
+          "step": "04",
+          "title": "Sparse conventional model",
+          "detail": "Z-score scaling and class-weighted L1 logistic regression; C tuned in the inner loop."
+        },
+        {
+          "step": "05",
+          "title": "Nested validation",
+          "detail": "5-fold \u00d7 3 repeated outer CV, 3-fold inner tuning, pooled out-of-fold predictions, 1,000 bootstrap intervals."
+        },
+        {
+          "step": "06",
+          "title": "Stability ranking",
+          "detail": "Features ranked by outer-fold selection frequency, standardized coefficient magnitude, and univariate effect."
+        }
+      ]
+    }
+  },
+  "clinicalContext": [
+    {
+      "variable": "Molecular subtype",
+      "group": "Basal",
+      "pcr": 15,
+      "n": 61,
+      "rate": 0.246
+    },
+    {
+      "variable": "Molecular subtype",
+      "group": "Her2",
+      "pcr": 10,
+      "n": 23,
+      "rate": 0.435
+    },
+    {
+      "variable": "Molecular subtype",
+      "group": "LumA",
+      "pcr": 13,
+      "n": 111,
+      "rate": 0.117
+    },
+    {
+      "variable": "Molecular subtype",
+      "group": "LumB",
+      "pcr": 13,
+      "n": 43,
+      "rate": 0.302
+    },
+    {
+      "variable": "ER status",
+      "group": "neg",
+      "pcr": 28,
+      "n": 91,
+      "rate": 0.308
+    },
+    {
+      "variable": "ER status",
+      "group": "pos",
+      "pcr": 23,
+      "n": 147,
+      "rate": 0.156
+    },
+    {
+      "variable": "HER2 status",
+      "group": "neg",
+      "pcr": 28,
+      "n": 172,
+      "rate": 0.163
+    },
+    {
+      "variable": "HER2 status",
+      "group": "pos",
+      "pcr": 23,
+      "n": 66,
+      "rate": 0.348
+    },
+    {
+      "variable": "Menopause",
+      "group": "post",
+      "pcr": 19,
+      "n": 109,
+      "rate": 0.174
+    },
+    {
+      "variable": "Menopause",
+      "group": "pre",
+      "pcr": 32,
+      "n": 129,
+      "rate": 0.248
+    }
+  ],
+  "guardrails": [
+    "Exploratory retrospective analysis\u2014not a clinical decision tool.",
+    "No external cohort is supplied; internal cross-validation cannot establish transportability.",
+    "The strict response field is used as a pCR proxy and should be verified against the source data dictionary and pathology definition.",
+    "No repeat scans, segmentations, scanner/protocol metadata, or acquisition sites were available for ICC, perturbation testing, or ComBat harmonization.",
+    "Feature stability under segmentation variability and batch effects remains unknown.",
+    "Intervals summarize pooled out-of-fold predictions and do not fully capture uncertainty from all preprocessing choices.",
+    "Only 50 deaths were observed among 560 evaluable patients for the survival model; this event count limits the precision of the concordance interval more than the sample size alone suggests, and only overall survival could be modeled since disease-specific/disease-free/progression-free fields are empty in the source data."
+  ]
+}
